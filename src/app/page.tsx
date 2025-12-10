@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { DUMMY_DATA } from '@/lib/dummy-data';
 import { getImageUrl, TotenbildRecord } from '@/lib/types';
+import Header from '@/components/Header';
 
 export default function Home() {
   const [search, setSearch] = useState('');
@@ -120,19 +121,7 @@ export default function Home() {
   return (
     <main className="min-h-screen pb-20">
       {/* Hero */}
-      <header className="bg-white border-b border-[var(--c-border)] py-16 mb-12 relative overflow-hidden">
-        {!isDbConfigured && (
-          <div className="absolute top-0 left-0 w-full bg-amber-100 text-amber-800 text-xs text-center py-1">
-            Demo Modus: Keine Datenbankverbindung erkannt. Zeige Beispieldaten.
-          </div>
-        )}
-        <div className="container text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl text-[var(--c-text-primary)] mb-6 tracking-tight">Totenbilder Archiv</h1>
-          <p className="text-[var(--c-text-secondary)] max-w-2xl mx-auto text-lg font-light">
-            Ein würdevolles Gedenken. Bewahrung der Erinnerung an vergangene Generationen.
-          </p>
-        </div>
-      </header>
+      <Header showDemoBanner={!isDbConfigured} />
 
       {/* Search Bar */}
       <div className="container mb-16 relative z-10 -mt-8">
