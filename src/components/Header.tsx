@@ -13,7 +13,7 @@ export default function Header({ showDemoBanner = false }: HeaderProps) {
                     Demo Modus: Keine Datenbankverbindung erkannt. Zeige Beispieldaten.
                 </div>
             )}
-            <div className="container mx-auto px-4 py-8 md:py-12 text-center relative z-10">
+            <div className="w-full px-4 md:px-8 py-8 md:py-12 text-center relative z-10">
                 <Link href="/" className="inline-block">
                     <h1 className="text-4xl md:text-5xl font-serif text-[var(--c-text-primary)] mb-4 tracking-tight hover:opacity-80 transition-opacity">
                         Totenbilder Archiv
