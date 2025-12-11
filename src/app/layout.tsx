@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: 'Ein würdevolles Gedenken.',
 };
 
+import Footer from '@/components/Footer';
+
 export default function RootLayout({
   children,
 }: {
@@ -26,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className={`${playfair.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body className="min-h-screen flex flex-col">
+        <div className="flex-grow">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
