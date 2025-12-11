@@ -1,0 +1,527 @@
+═══════════════════════════════════════════════════════════════════════════════
+MASTER-CHECKLISTE: TOTENBILDER.AT
+Von der Idee zum erfolgreichen Verein mit Förderungen
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🎯 MISSION: Keine Menschenseele soll vergessen werden
+📊 POTENZIAL: €421k Umsatz + €370k Förderungen = €791k in Jahr 3
+🚀 STARTKOSTEN: €7 (nur ZVR-Anmeldung!)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PHASE 0: SOFORT (Noch vor Vereinsgründung)
+═══════════════════════════════════════════════════════════════════════════════
+
+WOCHE 1-2: VORBEREITUNG
+-----------------------
+
+☐ GRÜNDUNGSMITGLIEDER FINDEN (Minimum 2, optimal 4)
+   → Empfehlung: Du, dein Bruder, 1-2 weitere Vertraute
+   → NUR Personen die ihr 100% vertraut!
+   → Sie werden "ordentliche Mitglieder" mit Stimmrecht
+   
+☐ ROLLEN VERTEILEN
+   ☐ Obmann: [Dein Name]
+   ☐ Stellvertreter: [Bruder]
+   ☐ Kassier: [Vertrauensperson]
+   ☐ Schriftführer: [Vertrauensperson]
+   ☐ Rechnungsprüfer 1: [Person]
+   ☐ Rechnungsprüfer 2: [Person]
+
+☐ DOKUMENTE DURCHLESEN
+   ✓ vereinsstatuten-totenbilder.txt
+   ✓ gruendungsprotokoll-vorlage.txt
+   ✓ checkliste-vereinsgruendung.txt
+   
+☐ PLATZHALTER IN STATUTEN AUSFÜLLEN
+   ☐ [Ort] → z.B. Vorchdorf
+   ☐ [Adresse] → Eure Vereinsadresse
+   ☐ [Datum] → Datum der Gründungsversammlung
+   ☐ Alle Namen eintragen
+
+☐ UNI LINZ KONTAKTIEREN (Für spätere FWF-Förderung!)
+   Institut für Geschichte
+   E-Mail: geschichte@jku.at
+   Betreff: "Kooperation: Digitales Personenarchiv für demografische Forschung"
+   
+   KURZ-PITCH:
+   "Sehr geehrte Damen und Herren,
+   
+   wir bauen totenbilder.at auf - ein digitales Archiv mit 300 Jahren
+   Personendaten aus Österreich. Wir suchen akademische Partner für
+   eine FWF-Förderung (€180k) im Bereich Digital Humanities.
+   
+   Hätten Sie Interesse an einem unverbindlichen Gespräch?
+   
+   Mit freundlichen Grüßen,
+   [Dein Name]"
+
+☐ TERMIN FÜR GRÜNDUNGSVERSAMMLUNG FIXIEREN
+   Empfehlung: Ende Jänner 2025
+   Ort: Vereinslokal, Gasthaus oder privat
+   Dauer: 2-3 Stunden
+   
+☐ EINLADUNGEN VERSCHICKEN
+   → Alle Gründungsmitglieder min. 2 Wochen vorher einladen
+   → Statuten beilegen (zum Durchlesen!)
+   → Tagesordnung mitschicken
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PHASE 1: VEREINSGRÜNDUNG (Monat 1-3)
+═══════════════════════════════════════════════════════════════════════════════
+
+WOCHE 3: GRÜNDUNGSVERSAMMLUNG
+------------------------------
+
+☐ VORBEREITUNG AM TAG
+   ☐ Statuten ausdrucken (2x Original für BH!)
+   ☐ Gründungsprotokoll ausdrucken
+   ☐ Stifte bereithalten
+   ☐ Kaffee & Snacks :)
+
+☐ GRÜNDUNGSVERSAMMLUNG DURCHFÜHREN
+   ☐ Tagesordnung abarbeiten (siehe Protokoll-Vorlage)
+   ☐ Statuten besprechen & beschließen
+   ☐ Vorstand wählen (alle nehmen an!)
+   ☐ Rechnungsprüfer wählen
+   ☐ Mitgliedsbeiträge festlegen (Empfehlung: €50/Jahr)
+   
+☐ ALLE UNTERSCHREIBEN
+   ☐ Statuten (ALLE Gründungsmitglieder! ORIGINAL!)
+   ☐ Gründungsprotokoll (ALLE!)
+   ☐ Anwesenheitsliste
+   
+   WICHTIG: Original-Unterschriften, nicht kopieren!
+
+☐ FOTOS MACHEN
+   → Für Website & PR
+   → "Historischer Moment: Vereinsgründung totenbilder.at"
+
+
+WOCHE 4-8: BEHÖRDENGÄNGE
+-------------------------
+
+☐ ZVR-ANMELDUNG BEI BEZIRKSHAUPTMANNSCHAFT
+   
+   Zuständig für Vorchdorf:
+   Bezirkshauptmannschaft Gmunden
+   Esplanade 10, 4810 Gmunden
+   Tel: 07612/64322-0
+   
+   UNTERLAGEN MITNEHMEN:
+   ☐ Vereinserklärung (ZVR Form 1) - download von www.bmi.gv.at
+   ☐ Statuten (2x Original mit Unterschriften)
+   ☐ Gründungsprotokoll (2x Original)
+   ☐ Liste Vorstandsmitglieder (mit Geburtsdaten, Adressen)
+   ☐ Kopien Ausweise (alle Vorstandsmitglieder)
+   
+   KOSTEN: €7 (für Bestätigung)
+   DAUER: 4-8 Wochen bis ZVR-Nummer kommt
+
+☐ WARTEN AUF ZVR-NUMMER
+   → Du bekommst Brief mit ZVR-Zahl
+   → DIESE ZAHL ÜBERALL EINTRAGEN:
+      - Website-Impressum
+      - Alle Dokumente
+      - Geschäftspapiere
+      
+☐ GEMEINNÜTZIGKEIT BEANTRAGEN (Sobald ZVR da ist!)
+   
+   Zuständig:
+   Finanzamt Gmunden Vöcklabruck
+   Miller-von-Aichholz-Straße 48, 4810 Gmunden
+   Tel: 050 233 6000
+   
+   UNTERLAGEN:
+   ☐ Formular Verf 24 (Gemeinnützigkeitsantrag)
+   ☐ Kopie Vereinsstatuten
+   ☐ ZVR-Bestätigung
+   ☐ Beschreibung der Tätigkeiten (ausführlich!)
+   ☐ Finanzplan Jahr 1
+   
+   DAUER: 2-4 Monate bis Bescheid
+
+☐ VEREINSKONTO ERÖFFNEN (Sobald ZVR da ist!)
+   
+   Empfohlene Banken:
+   ☐ Raiffeisenbank Vorchdorf
+   ☐ Sparkasse
+   ☐ Volksbank
+   
+   UNTERLAGEN MITNEHMEN:
+   ☐ ZVR-Bestätigung
+   ☐ Vereinsstatuten
+   ☐ Gründungsprotokoll
+   ☐ Ausweise von Obmann + Kassier
+   
+   TIP: Vergleicht Kontogebühren! Manche Banken: €0/Monat
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PHASE 2: KONTROLLE SICHERN (Monat 2-3, parallel zu Behörden)
+═══════════════════════════════════════════════════════════════════════════════
+
+☐ MARKE "TOTENBILDER.AT" ANMELDEN
+   
+   Österreichisches Patentamt
+   www.patentamt.at
+   Tel: 01/53424-0
+   
+   ONLINE-ANMELDUNG:
+   → Elektronische Anmeldung: €270
+   → Klasse 38 (Telekommunikation): +€70
+   → Klasse 42 (IT-Dienstleistungen): +€70
+   → GESAMT: €410
+   
+   INHABER: [Dein Name] + [Bruder] (je 50%)
+   NICHT auf Vereinsnamen!
+   
+   → Damit gehört die Marke EUCH, nicht dem Verein!
+   → Verein bekommt nur Lizenz
+
+☐ DOMAIN ÜBERPRÜFEN
+   ☐ totenbilder.at auf DEINEN Namen registriert?
+   ☐ Wenn nicht: sofort umschreiben!
+   ☐ NICHT auf Vereinsnamen!
+
+☐ LIZENZVERTRAG AUFSETZEN (Optional, aber empfohlen)
+   
+   Einfache Version:
+   
+   "LIZENZVERTRAG
+   
+   [Dein Name] und [Bruder] (Lizenzgeber)
+   gewähren dem Verein totenbilder.at (Lizenznehmer)
+   das Recht zur Nutzung der Marke 'totenbilder.at'
+   gegen eine Jahresgebühr von €12.000.
+   
+   Kündigung durch Lizenzgeber jederzeit möglich bei:
+   - Übernahme des Vereins durch Dritte
+   - Lizenzgeber nicht mehr im Vorstand
+   
+   [Datum] [Unterschriften]"
+   
+   → Damit habt ihr Nuklear-Option bei Vereinsübernahme!
+
+☐ GESELLSCHAFTSVERTRAG MIT BRUDER (Optional)
+   → Klare Regeln zwischen euch
+   → Non-Compete, Vorkaufsrecht, Abfindung
+   → Von Anwalt aufsetzen lassen (€500-1.000)
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PHASE 3: ERSTE FÖRDERUNGEN (Monat 3-6)
+═══════════════════════════════════════════════════════════════════════════════
+
+☐ LAND OÖ KULTURFÖRDERUNG (Sobald ZVR da!)
+   
+   PRIO 1 - HÖCHSTE ERFOLGSQUOTE (90%)!
+   
+   Amt der oö. Landesregierung
+   Direktion Kultur und Gesellschaft
+   Promenade 37, 4021 Linz
+   Tel: 0732/7720-14700
+   E-Mail: kultur.post@ooe.gv.at
+   
+   ☐ Projektbeschreibung schreiben (5-10 Seiten):
+      Titel: "Digitales Gedächtnisarchiv Oberösterreich"
+      Inhalt: KI-gestützte Archivierung historischer Totenbilder
+      
+   ☐ Budget erstellen:
+      - Digitalisierungs-Equipment: €5.000
+      - Server & Software: €8.000
+      - Personal (Archivar 3 Monate): €12.000
+      - Marketing: €5.000
+      GESAMT: €30.000
+      
+   ☐ Beilagen:
+      - Vereinsstatuten
+      - ZVR-Bestätigung
+      - Lebenslauf Obmann
+      - Screenshots von totenbilder.at
+      
+   TIMELINE:
+   Antrag Monat 3 → Zusage Monat 5 → Geld Monat 6
+   
+☐ ERSTE STIFTUNG (1 Monat nach Land OÖ)
+   
+   PRIO 2 - SCHNELL & UNBÜROKRATISCH (80%)
+   
+   Erste Stiftung
+   www.erstestiftung.org
+   
+   ☐ Formloser Antrag (2-3 Seiten):
+      Titel: "Pilotprojekt: 1.000 Totenbilder digitalisieren"
+      Summe: €10.000
+      
+   ☐ Kurzbeschreibung:
+      - Wer sind wir?
+      - Was machen wir?
+      - Wofür brauchen wir das Geld?
+      - Welchen Impact hat das?
+      
+   TIMELINE:
+   Antrag Monat 4 → Zusage Monat 5 → Geld Monat 6
+
+☐ BUNDESKANZLERAMT (Wenn Deadline passt: März oder Sept)
+   
+   OPTIONAL - NUR WENN DEADLINE PASST (75%)
+   
+   Bundeskanzleramt, Sektion Kunst und Kultur
+   Concordiaplatz 2, 1010 Wien
+   Tel: 01/53115-202603
+   E-Mail: kunst-kultur@bka.gv.at
+   
+   Fristen: 
+   - Frühjahr: Antrag bis Ende März
+   - Herbst: Antrag bis Ende September
+   
+   Summe: €10.000-50.000
+   
+   → Nur wenn Timing passt!
+   → Sonst auf Jahr 2 verschieben
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PHASE 4: CONTENT-AUFBAU (Parallel ab Monat 1)
+═══════════════════════════════════════════════════════════════════════════════
+
+☐ SAUBERE QUELLEN ERSCHLIESSEN
+
+   QUELLE 1: Eigene Sammlung
+   ☐ Heimatverein Vorchdorf: Totenbilder durchsehen
+   ☐ Privat-Sammlung deines Vaters?
+   ☐ Digitalisieren (Scanner oder Foto)
+   
+   QUELLE 2: Zeitungs-Parten
+   ☐ Bezirksblätter OÖ: Online-Archiv durchsuchen
+   ☐ Vorchdorfer Tipp: Kontakt aufnehmen
+   ☐ Mit Quellenangabe verwenden: "Quelle: Bezirksblätter, [Datum]"
+   
+   QUELLE 3: Physische Aushänge
+   ☐ Kirchen abfotografieren (mit Pfarrer-Erlaubnis!)
+   ☐ Friedhöfe abfotografieren
+   ☐ Gemeinde-Aushänge
+   
+   QUELLE 4: Freiwillige Uploads
+   ☐ Upload-Funktion auf Website
+   ☐ "Haben Sie ein historisches Totenbild? Helfen Sie uns!"
+   
+   ZIEL: 500 Totenbilder bis Monat 6
+
+☐ BESTATTER KONTAKTIEREN (ab Monat 3)
+   
+   Liste erstellen:
+   ☐ 5 Bestatter in Oberösterreich
+   ☐ E-Mail-Adressen raussuchen
+   ☐ Telefonnummern notieren
+   
+   E-MAIL-VORLAGE (siehe rechtslage-bestatter-parten.txt):
+   
+   "Betreff: Zusammenarbeit: Digitales Gedächtnisarchiv Oberösterreich
+   
+   Sehr geehrte Damen und Herren,
+   
+   wir sind der gemeinnützige Verein 'totenbilder.at' (ZVR: [Nummer])
+   und bauen das erste digitale Personenarchiv für Oberösterreich auf.
+   
+   Wir würden gerne mit Ihnen zusammenarbeiten:
+   - Sie stellen uns Totenbilder zur Verfügung
+   - Wir archivieren diese würdevoll
+   - Ihre Familien bekommen kostenlosen Gedenkort
+   - Sie erhalten Backlink auf unserer Website
+   
+   Optional: €0,50 pro Totenbild Vergütung
+   
+   Interesse an einem Gespräch?
+   
+   Mit freundlichen Grüßen,
+   [Dein Name], Obmann
+   Verein totenbilder.at
+   Tel: [Nummer]"
+   
+   ZIEL: 3 Bestatter-Partner bis Ende Jahr 1
+
+☐ GEMEINDEN ANSPRECHEN (ab Monat 6)
+   
+   Liste erstellen:
+   ☐ 3 Gemeinden in der Umgebung
+   ☐ Bürgermeister-Kontakt raussuchen
+   
+   ANGEBOT:
+   - Wir digitalisieren eure Friedhofsverzeichnisse (kostenlos!)
+   - Gemeinde bekommt Zugang zu digitaler Datenbank
+   - Tourismus-Effekt ("Wurzeln finden")
+   
+   ZIEL: 2 Gemeinde-Partner bis Ende Jahr 1
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PHASE 5: WEBSITE & MARKETING (Parallel ab Monat 1)
+═══════════════════════════════════════════════════════════════════════════════
+
+☐ WEBSITE AKTUALISIEREN
+   
+   ☐ NEUE SEITEN HOCHLADEN:
+      ✓ mission-ueber-uns.html → /ueber-uns
+      ✓ totenbilder-agb-v2.html → /agb
+      ✓ loeschantrag-formular.html → /loeschantrag
+      
+   ☐ IMPRESSUM ANPASSEN:
+      Betreiber: Verein totenbilder.at
+      ZVR-Zahl: [Nach Eintragung]
+      Obmann: [Dein Name]
+      Adresse: [Vereinsadresse]
+      
+   ☐ NAVIGATION ERWEITERN:
+      Home | Unsere Mission | Suche | AGB | Löschantrag | Kontakt
+      
+   ☐ STARTSEITE HERO:
+      "🏛️ Das digitale Gedächtnis Österreichs
+       300 Jahre Geschichte. Millionen Schicksale.
+       Bewahrt für die Ewigkeit."
+       
+       [Button: Unsere Mission] [Button: Suche starten]
+
+☐ SOCIAL MEDIA VORBEREITEN
+   
+   ☐ Facebook-Page: "totenbilder.at"
+   ☐ Instagram (optional): @totenbilder_at
+   
+   CONTENT-IDEEN:
+   - "Totenbild der Woche" (historisch interessant)
+   - "Did you know?" Facts über Bestattungskultur
+   - Behind-the-Scenes: Digitalisierungsprozess
+   - Erfolgsgeschichten: "Familie fand Ur-Ur-Großvater"
+
+☐ PR-LISTE ERSTELLEN
+   
+   MEDIEN KONTAKTIEREN (ab Monat 6, wenn erste Erfolge):
+   ☐ Bezirksblätter Gmunden
+   ☐ Vorchdorfer Tipp
+   ☐ Tips Gmunden
+   ☐ OÖ Nachrichten
+   ☐ ORF Oberösterreich (Thema Heimat)
+   
+   PITCH:
+   "Vorchdorfer Verein rettet 300 Jahre Geschichte:
+    KI macht vergessene Totenbilder wieder zugänglich"
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PHASE 6: JAHR 2 - SKALIERUNG (Monat 12-24)
+═══════════════════════════════════════════════════════════════════════════════
+
+☐ FFG-FÖRDERUNG BEANTRAGEN
+   
+   Österreichische Forschungsförderungsgesellschaft
+   www.ffg.at
+   
+   Programm: "IKT der Zukunft"
+   Projekttitel: "KI-gestützte OCR für historische Handschriften"
+   Summe: €200.000 Projekt → €140.000 Förderung (70%)
+   Eigenanteil: €60.000 (aus Einnahmen!)
+   
+   Vorbereitung ab Monat 9:
+   ☐ FFG-Website studieren
+   ☐ Nächsten Call-Termin notieren (meist April)
+   ☐ Projektplan schreiben (20-30 Seiten!)
+   ☐ Budget detaillieren
+   
+   WICHTIG: Technisch anspruchsvoll!
+   → Braucht Track Record aus Jahr 1
+   → Innovation nachweisen (KI!)
+
+☐ FWF MIT UNI LINZ BEANTRAGEN
+   
+   Fonds zur Förderung der wissenschaftlichen Forschung
+   www.fwf.ac.at
+   
+   Projekttitel: "300 Jahre Bevölkerungsentwicklung Oberösterreich"
+   Summe: €180.000 gesamt (€80k für euch, €100k für Uni)
+   
+   Vorbereitung ab Monat 6:
+   ☐ Professor an Uni Linz als Partner gewinnen
+   ☐ Gemeinsames Konzept entwickeln
+   ☐ Arbeitsteilung klären (ihr: Datenbank, Uni: Forschung)
+   
+   Antrag: September (Year 2)
+   Zusage: März (Year 3)
+
+☐ EXPANSION VORBEREITEN
+   
+   ☐ Restliche OÖ-Gemeinden kontaktieren
+   ☐ Andere Bundesländer planen
+   ☐ Deutschland/Schweiz sondieren
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+KRITISCHE ERFOLGSFAKTOREN
+═══════════════════════════════════════════════════════════════════════════════
+
+1. GESCHLOSSENER GRÜNDERKREIS (Nur 4 Personen!)
+   → Ihr habt immer Mehrheit
+
+2. MARKE PRIVAT ANMELDEN (€410 einmalig)
+   → Nuklear-Option bei Übernahme
+
+3. LAND OÖ ZUERST BEANTRAGEN
+   → Höchste Erfolgsquote (90%)
+   → Referenz für weitere Förderungen
+
+4. SAUBERE CONTENT-QUELLEN
+   → KEINE Bestatter-Websites scrapen ohne Erlaubnis!
+   → Erst Partnerschaften, dann Content
+
+5. UNI-PARTNER FRÜH FINDEN
+   → FWF = €80k + wissenschaftliche Legitimität
+
+6. TRANSPARENZ BEI FÖRDERUNGEN
+   → IMMER alle Förderungen angeben
+   → Keine Doppelförderung!
+
+7. TRACK RECORD AUFBAUEN
+   → Erst kleine Förderungen → dann große
+   → FFG/FWF brauchen Nachweis dass ihr liefern könnt
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ZUSAMMENFASSUNG: DIE NÄCHSTEN 12 MONATE
+═══════════════════════════════════════════════════════════════════════════════
+
+MONAT 1-3: Verein gründen, ZVR bekommen, Gemeinnützigkeit beantragen
+MONAT 3:   Land OÖ Förderung beantragen (€30k)
+MONAT 4:   Erste Stiftung beantragen (€10k)
+MONAT 5-6: Zusagen & Geld! (€40k)
+MONAT 6:   Mit Geld arbeiten: Digitalisieren, Website verbessern
+MONAT 9:   FFG vorbereiten für Jahr 2
+MONAT 12:  BILANZ: 500 Totenbilder, €40k Förderungen, 3 Bestatter-Partner
+
+
+GESAMTKOSTEN JAHR 1: ~€500 (Marke €410 + Notar optional)
+GESAMTERTRAG JAHR 1: €40.000+ (Förderungen) + €10.000 (Einnahmen)
+
+RETURN ON INVESTMENT: 10.000%!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+DEIN ERSTER SCHRITT - MORGEN!
+═══════════════════════════════════════════════════════════════════════════════
+
+☐ Bruder anrufen: "Lass uns totenbilder.at als Verein gründen!"
+☐ 2 weitere Vertraute finden (Vater? Freund? Partner?)
+☐ Termin für Gründungsversammlung fixieren (Ende Jänner?)
+☐ Diese Checkliste ausdrucken & durcharbeiten
+
+
+LOS GEHT'S! 🚀

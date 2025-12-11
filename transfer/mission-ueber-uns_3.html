@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Mission - totenbilder.at</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #2C3E50 0%, #4A5F7F 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            background: white;
+            padding: 60px 40px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #2C3E50;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #C9ADA7;
+            padding-bottom: 15px;
+        }
+        
+        h3 {
+            color: #5D6D7E;
+            font-size: 1.6em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .mission-card {
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE5B4 100%);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #C9ADA7;
+            transition: transform 0.3s;
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .mission-card h4 {
+            color: #2C3E50;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        
+        .mission-card p {
+            margin: 0;
+            color: #555;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+            margin: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #C9ADA7;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #C9ADA7;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #C9ADA7;
+        }
+        
+        .timeline-item h4 {
+            color: #2C3E50;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        
+        .quote-box {
+            background: #E8F4F8;
+            border-left: 5px solid #3498DB;
+            padding: 30px;
+            margin: 40px 0;
+            font-style: italic;
+            font-size: 1.2em;
+            color: #2C3E50;
+        }
+        
+        .team-section {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .team-section h2 {
+            color: white;
+            border-bottom: 3px solid rgba(255,255,255,0.3);
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero p {
+                font-size: 1.1em;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🏛️ Keine Menschenseele soll vergessen werden</h1>
+        <p>300 Jahre Geschichte. Millionen Schicksale. Ein digitales Gedächtnis für die Ewigkeit.</p>
+    </div>
+
+    <div class="container">
+        <!-- Vision & Mission -->
+        <div class="section">
+            <h2>📜 Unsere Vision: Ein digitales Gedächtnisarchiv für Österreich</h2>
+            
+            <p style="font-size: 1.2em; line-height: 1.9; margin-bottom: 30px;">
+                <strong>totenbilder.at</strong> ist mehr als eine Gedenkplattform – wir bauen das <strong>umfassendste historische Personenarchiv Österreichs</strong> auf. Unser Ziel: Keine Menschenseele der letzten 300 Jahre, die schriftlich und bildlich erfasst wurde, soll in Vergessenheit geraten.
+            </p>
+
+            <div class="quote-box">
+                "In einer Zeit, in der Familienverbände kleiner werden und Erinnerungen verblassen, schaffen wir ein digitales Gedächtnis, das Generationen überdauert. Wir retten historische Dokumente vor dem Verfall und machen sie für Millionen Menschen zugänglich."
+            </div>
+
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <h4>🌳 Genealogisches Fundament</h4>
+                    <p>Die perfekte Ausgangsposition für Familienforscher: Durchsuchbare Daten über Millionen Verstorbene, verknüpft mit Orten, Daten und Familienbeziehungen.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>📚 Kulturelles Erbe</h4>
+                    <p>Wir bewahren Totenbilder, Parten und biografische Informationen als unverzichtbaren Teil unserer regionalen Geschichte und Identität.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>🔬 Wissenschaftliche Basis</h4>
+                    <p>Einzigartige Datenbasis für demografische Studien, Namenforschung, Alternsforschung und historische Analysen.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>💚 Würdevolles Gedenken</h4>
+                    <p>Jeder Mensch hinterlässt Spuren. Wir geben diesen Spuren einen würdigen digitalen Raum und ermöglichen nachfolgenden Generationen das Gedenken.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>⏰ Rettung vor Verfall</h4>
+                    <p>Vergilbte Totenbilder aus Schubladen, staubige Parten aus Archiven – wir digitalisieren, bevor diese unwiederbringlichen Zeitdokumente verloren gehen.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>🌍 Demokratisierung des Zugangs</h4>
+                    <p>Was früher nur Historikern und Archivbesuchern vorbehalten war, machen wir für jeden zugänglich – kostenlos, durchsuchbar, von überall.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistiken -->
+        <div class="section">
+            <h2>📊 Totenbilder.at in Zahlen</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">300+</span>
+                    <span class="stat-label">Jahre abgedeckt</span>
+                </div>
+                
+                <div class="stat-box">
+                    <span class="stat-number">10.000+</span>
+                    <span class="stat-label">Totenbilder (Ziel 2025)</span>
+                </div>
+                
+                <div class="stat-box">
+                    <span class="stat-number">2.095</span>
+                    <span class="stat-label">Österreichische Gemeinden</span>
+                </div>
+                
+                <div class="stat-box">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Jahre Bewahrung</span>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 30px; font-size: 1.1em; color: #7F8C8D;">
+                <em>Aktueller Stand: [X] Totenbilder aus [Y] Gemeinden – täglich wachsend</em>
+            </p>
+        </div>
+
+        <!-- Historischer Kontext -->
+        <div class="section">
+            <h2>🕰️ Von Kirchenbüchern zur digitalen Zukunft</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                Unsere Arbeit steht in der Tradition jahrhundertealter Archivierungspraktiken – nur zeitgemäß und für alle zugänglich:
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>1563 – Konzil von Trient</h4>
+                    <p>Beginn der systematischen Erfassung von Taufen, Hochzeiten und Sterbefällen in Kirchenbüchern (Matriken). Diese bilden bis heute die Grundlage genealogischer Forschung.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>1784 – Josephinische Reformen</h4>
+                    <p>Einführung staatlicher Personenstandsregister (Standesämter) in Österreich. Der Staat übernimmt die Dokumentation von Geburten, Hochzeiten und Todesfällen.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>1800er – Totenbilder-Tradition</h4>
+                    <p>Verbreitung gedruckter Totenbilder und Parten als Teil der Trauerkultur im deutschsprachigen Raum, besonders in Österreich und Bayern.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>1900-2000 – Analoge Archive</h4>
+                    <p>Friedhofsverwaltungen, Pfarren und Heimatvereine sammeln Totenbilder in Ordnern und Karteikästen – oft schwer zugänglich und vom Verfall bedroht.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2024 – Die digitale Revolution</h4>
+                    <p><strong>totenbilder.at startet:</strong> KI-gestützte Digitalisierung, ortsbasierte Suche, genealogische Vernetzung – das historische Archiv wird zum lebendigen Forschungsinstrument des 21. Jahrhunderts.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2025+ – Die Zukunft</h4>
+                    <p>Expansion auf ganz Österreich, dann DACH-Raum. Integration mit genealogischen Plattformen. Millionen Schicksale, durchsuchbar und vernetzt – für die Ewigkeit bewahrt.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vergleich mit etablierten Archiven -->
+        <div class="section">
+            <h2>🏛️ Wie etablierte Archive – nur moderner</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                Unsere Arbeit folgt denselben Prinzipien wie anerkannte historische Institutionen:
+            </p>
+
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <thead>
+                    <tr style="background: #f0f0f0;">
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Institution</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Aufgabe</th>
+                        <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">totenbilder.at parallel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 15px; border: 1px solid #ddd;"><strong>Österreichisches Staatsarchiv</strong></td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">Bewahrung staatlicher Dokumente, online zugänglich</td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">Bewahrung von Totenbildern, digital durchsuchbar</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; border: 1px solid #ddd;"><strong>Diözesanarchive</strong></td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">Kirchenbücher (Matriken) mit Tauf-, Trau-, Sterbedaten</td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">Ergänzung um Bilder, Orte und biografische Details</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; border: 1px solid #ddd;"><strong>Friedhofsverwaltungen</strong></td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">Lokale Grabnachweise, meist nur vor Ort einsehbar</td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">Zentralisiert, durchsuchbar, mit historischem Kontext</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; border: 1px solid #ddd;"><strong>Heimatmuseen</strong></td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">Sammlung lokaler Artefakte, begrenzte Öffnungszeiten</td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">24/7 zugängliches digitales Museum für Jedermann</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; border: 1px solid #ddd;"><strong>Gedenkstätten (z.B. Mauthausen)</strong></td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">Namen und Schicksale von Opfern öffentlich dokumentieren</td>
+                        <td style="padding: 15px; border: 1px solid #ddd;">Ähnlicher Ansatz für normale Sterbefälle – jeder verdient Erinnerung</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Team & Verein -->
+        <div class="team-section">
+            <h2>👥 Getragen von Leidenschaft</h2>
+            
+            <p style="font-size: 1.2em; max-width: 800px; margin: 0 auto 30px;">
+                <strong>totenbilder.at</strong> wird betrieben durch den <strong>Verein totenbilder.at</strong> – einer Gruppe von Heimatforschern, Historikern und Technik-Enthusiasten, die ihre Leidenschaft für lokale Geschichte mit modernster Technologie verbinden.
+            </p>
+
+            <p style="max-width: 800px; margin: 0 auto;">
+                Was als Hobby-Projekt mit einer kleinen Sammlung historischer Totenbilder aus Vorchdorf begann, ist zur Vision eines österreichweiten Archivs gewachsen. Wir sind keine Investoren-getriebene Plattform, sondern ein <strong>Non-Profit-Projekt aus Überzeugung</strong>.
+            </p>
+        </div>
+
+        <!-- Technologie -->
+        <div class="section">
+            <h2>🤖 Modernste Technologie trifft Geschichte</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                Was historische Archive mühsam von Hand erfassten, automatisieren wir mit KI – ohne den menschlichen Faktor zu verlieren:
+            </p>
+
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <h4>🧠 KI-gestützte Texterkennung</h4>
+                    <p>Automatische Extraktion von Namen, Daten und Orten aus Totenbildern – auch bei handgeschriebenen oder vergilbten Dokumenten.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>📍 Geografische Vernetzung</h4>
+                    <p>Zuordnung zu Orten, Friedhöfen und Gemeinden. Interaktive Karten zeigen historische Bevölkerungsentwicklung.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>🌳 Genealogische Verknüpfung</h4>
+                    <p>Automatische Erkennung von Familienverbänden über Generationen – der Traum jedes Ahnenforschers.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>✅ Menschliche Qualitätskontrolle</h4>
+                    <p>Trotz KI: Jeder Eintrag wird von unserem Team geprüft. Historische Korrektheit hat Priorität.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soziale Verantwortung -->
+        <div class="section">
+            <h2>💚 Würde und Respekt als Grundprinzip</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                Bei allem technologischen Fortschritt vergessen wir nie: Hinter jedem Eintrag steht ein Menschenleben, eine Familie, eine Geschichte.
+            </p>
+
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <h4>🕊️ Würdevolle Darstellung</h4>
+                    <p>Jede Person wird mit Respekt behandelt. Keine Sensationsgier, keine Kommerzialisierung des Todes.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>⚖️ Angehörigenrechte</h4>
+                    <p>48h-Garantie für Löschanträge. Der Wille der Familie geht im Zweifel vor – auch bei historisch wertvollen Dokumenten.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>🔒 Datenschutz</h4>
+                    <p>Höchste Sicherheitsstandards. Transparenz über Datenquellen. Keine Weitergabe an Dritte.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h4>📖 Transparenz</h4>
+                    <p>Offene Kommunikation über unsere Arbeitsweise, Datenquellen und rechtliche Grundlagen.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-box">
+            <h3>🌟 Seien Sie Teil dieser Mission</h3>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">
+                Gemeinsam bewahren wir Geschichte für kommende Generationen
+            </p>
+            <a href="/mitmachen" class="cta-button">Jetzt mitmachen</a>
+            <a href="/kontakt" class="cta-button">Kontakt aufnehmen</a>
+            <a href="/spenden" class="cta-button">Projekt unterstützen</a>
+        </div>
+
+        <!-- Abschluss -->
+        <div class="section" style="text-align: center;">
+            <h2>💫 Unsere Verantwortung gegenüber der Zukunft</h2>
+            
+            <p style="font-size: 1.2em; line-height: 1.9; max-width: 800px; margin: 0 auto;">
+                In 100 Jahren werden Historiker auf unsere Arbeit zurückblicken – so wie wir heute auf Kirchenbücher aus dem 18. Jahrhundert zurückblicken. <strong>Wir schaffen ein digitales Erbe</strong>, das Kriege, Katastrophen und den Wandel der Zeit überdauert.
+            </p>
+            
+            <p style="font-size: 1.1em; margin-top: 30px; color: #7F8C8D; font-style: italic;">
+                "Die Vergangenheit bewahren. Die Gegenwart dokumentieren. Die Zukunft ermöglichen."
+            </p>
+        </div>
+    </div>
+
+    <footer style="background: #2C3E50; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p style="margin: 0 0 10px;">
+            <strong>totenbilder.at</strong> – Ein Projekt des Heimat- und Kulturvereins Vorchdorf
+        </p>
+        <p style="margin: 0; opacity: 0.8;">
+            [Adresse] | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="40292e262f00342f34252e22292c2425326e2134">[email&#160;protected]</a> | <a href="/agb" style="color: #5DADE2;">AGB</a> | <a href="/datenschutz" style="color: #5DADE2;">Date

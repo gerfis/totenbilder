@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Löschantrag - totenbilder.at</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .intro {
+            background: #FFF9E6;
+            border-left: 5px solid #FFD700;
+            padding: 25px;
+            margin: 30px;
+        }
+        
+        .intro h2 {
+            color: #2C3E50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .intro ul {
+            margin-left: 20px;
+            color: #555;
+        }
+        
+        .intro li {
+            margin-bottom: 8px;
+        }
+        
+        .important-notice {
+            background: #E8F4F8;
+            border-left: 5px solid #3498DB;
+            padding: 20px;
+            margin: 30px;
+        }
+        
+        .important-notice h3 {
+            color: #2980B9;
+            margin-bottom: 10px;
+        }
+        
+        .form-container {
+            padding: 30px;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+        }
+        
+        .form-section h3 {
+            color: #2C3E50;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-bottom: 2px solid #C9ADA7;
+            padding-bottom: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            color: #555;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        label.required::after {
+            content: " *";
+            color: #E74C3C;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .radio-option:hover {
+            background: #f8f9fa;
+            border-color: #667eea;
+        }
+        
+        .radio-option input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            flex: 1;
+        }
+        
+        .help-text {
+            font-size: 0.9em;
+            color: #7F8C8D;
+            margin-top: 5px;
+        }
+        
+        .upload-area {
+            border: 2px dashed #ddd;
+            border-radius: 6px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #f8f9fa;
+        }
+        
+        .upload-area:hover {
+            border-color: #667eea;
+            background: #f0f2ff;
+        }
+        
+        .upload-area input[type="file"] {
+            display: none;
+        }
+        
+        .submit-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submit-button:active {
+            transform: translateY(0);
+        }
+        
+        .contact-info {
+            background: #2C3E50;
+            color: white;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 15px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .contact-info a {
+            color: #5DADE2;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #27AE60;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+        
+        .guarantee-badge::before {
+            content: "✓";
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .intro,
+            .important-notice,
+            .form-container {
+                padding: 20px;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Löschantrag stellen</h1>
+            <p>Wir respektieren Ihre Anliegen und bearbeiten jeden Antrag mit größter Sorgfalt</p>
+        </div>
+
+        <div class="intro">
+            <h2>🤝 Ihr gutes Recht</h2>
+            <p>Als Angehörige haben Sie das Recht, die Entfernung oder Änderung von Inhalten zu verlangen. Dies betrifft:</p>
+            <ul>
+                <li>Vollständige Gedenkseiten</li>
+                <li>Einzelne Fotos oder Bilder</li>
+                <li>Textliche Informationen</li>
+                <li>Gästebucheinträge</li>
+            </ul>
+            <div class="guarantee-badge">Bearbeitung innerhalb von 48 Stunden garantiert</div>
+        </div>
+
+        <div class="important-notice">
+            <h3>📋 Anspruchsberechtigt sind:</h3>
+            <ul>
+                <li>Ehegatte/Ehegattin oder eingetragene/r Partner/in</li>
+                <li>Kinder des/der Verstorbenen</li>
+                <li>Eltern (wenn keine Kinder vorhanden)</li>
+                <li>Geschwister (in bestimmten Fällen)</li>
+                <li>Andere nahe Verwandte nach Prüfung</li>
+            </ul>
+        </div>
+
+        <form id="loeschantrag-form" class="form-container">
+            <!-- Sektion 1: Persönliche Angaben -->
+            <div class="form-section">
+                <h3>1. Ihre persönlichen Angaben</h3>
+                
+                <div class="form-group">
+                    <label for="vorname" class="required">Vorname</label>
+                    <input type="text" id="vorname" name="vorname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nachname" class="required">Nachname</label>
+                    <input type="text" id="nachname" name="nachname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="required">E-Mail-Adresse</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="help-text">Wir kontaktieren Sie unter dieser Adresse bezüglich Ihres Antrags</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefon">Telefonnummer (optional)</label>
+                    <input type="tel" id="telefon" name="telefon">
+                    <div class="help-text">Für Rückfragen in dringenden Fällen</div>
+                </div>
+            </div>
+
+            <!-- Sektion 2: Verstorbene Person -->
+            <div class="form-section">
+                <h3>2. Angaben zur verstorbenen Person</h3>
+                
+                <div class="form-group">
+                    <label for="verstorbener-vorname" class="required">Vorname des/der Verstorbenen</label>
+                    <input type="text" id="verstorbener-vorname" name="verstorbener-vorname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="verstorbener-nachname" class="required">Nachname des/der Verstorbenen</label>
+                    <input type="text" id="verstorbener-nachname" name="verstorbener-nachname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="geburtsdatum">Geburtsdatum (falls bekannt)</label>
+                    <input type="date" id="geburtsdatum" name="geburtsdatum">
+                </div>
+                
+                <div class="form-group">
+                    <label for="sterbedatum">Sterbedatum (falls bekannt)</label>
+                    <input type="date" id="sterbedatum" name="sterbedatum">
+                </div>
+                
+                <div class="form-group">
+                    <label for="url">Link zur Gedenkseite (falls vorhanden)</label>
+                    <input type="text" id="url" name="url" placeholder="https://totenbilder.at/gedenkseite/...">
+                    <div class="help-text">Wenn Sie den direkten Link zur Seite kennen, erleichtert das die Bearbeitung</div>
+                </div>
+            </div>
+
+            <!-- Sektion 3: Verwandtschaftsverhältnis -->
+            <div class="form-section">
+                <h3>3. Ihr Verhältnis zum/zur Verstorbenen</h3>
+                
+                <div class="form-group">
+                    <label class="required">Ich bin:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="verhaeltnis" value="ehegatte" required>
+                            <span>Ehegatte/Ehegattin oder eingetragene/r Partner/in</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="verhaeltnis" value="kind" required>
+                            <span>Kind</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="verhaeltnis" value="elternteil" required>
+                            <span>Elternteil</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="verhaeltnis" value="geschwister" required>
+                            <span>Geschwister</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="verhaeltnis" value="andere" required>
+                            <span>Andere/r Verwandte/r</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sektion 4: Art der Anfrage -->
+            <div class="form-section">
+                <h3>4. Was möchten Sie?</h3>
+                
+                <div class="form-group">
+                    <label class="required">Mein Anliegen:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="aktion" value="vollstaendig-loeschen" required>
+                            <span>Vollständige Löschung der Gedenkseite</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="aktion" value="bilder-entfernen" required>
+                            <span>Nur Bilder/Fotos entfernen</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="aktion" value="daten-aendern" required>
+                            <span>Daten korrigieren oder ändern</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="aktion" value="gaestebuch-loeschen" required>
+                            <span>Gästebucheinträge entfernen</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="aktion" value="sonstiges" required>
+                            <span>Sonstiges Anliegen</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sektion 5: Begründung -->
+            <div class="form-section">
+                <h3>5. Begründung (optional, aber hilfreich)</h3>
+                
+                <div class="form-group">
+                    <label for="begruendung">Bitte beschreiben Sie Ihr Anliegen</label>
+                    <textarea id="begruendung" name="begruendung" placeholder="Z.B.: Die Darstellung entspricht nicht dem Willen der Familie... / Die Daten sind fehlerhaft... / Wir möchten nicht, dass diese Informationen öffentlich sind..."></textarea>
+                    <div class="help-text">Eine Begründung ist nicht zwingend erforderlich, hilft uns aber bei der Bearbeitung</div>
+                </div>
+            </div>
+
+            <!-- Sektion 6: Nachweise (optional) -->
+            <div class="form-section">
+                <h3>6. Nachweise hochladen (optional)</h3>
+                
+                <div class="form-group">
+                    <label for="nachweis">Nachweis des Verwandtschaftsverhältnisses</label>
+                    <div class="upload-area" onclick="document.getElementById('nachweis').click()">
+                        <p>📄 Klicken Sie hier zum Hochladen</p>
+                        <p class="help-text">Z.B. Sterbeurkunde, Heiratsurkunde, Geburtsurkunde (nur bei Bedarf)</p>
+                        <input type="file" id="nachweis" name="nachweis" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+                    <div class="help-text">In den meisten Fällen ist kein Nachweis erforderlich. Bei Zweifeln werden wir Sie kontaktieren.</div>
+                </div>
+            </div>
+
+            <!-- Sektion 7: Dringlichkeit -->
+            <div class="form-section">
+                <h3>7. Dringlichkeit</h3>
+                
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="dringend" name="dringend">
+                        <label for="dringend">
+                            <strong>Dies ist ein dringender Fall</strong><br>
+                            <span class="help-text">Wir bemühen uns um sofortige Bearbeitung (innerhalb von 24 Stunden). Bitte geben Sie nach Möglichkeit eine Telefonnummer an.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sektion 8: Datenschutz & Bestätigung -->
+            <div class="form-section">
+                <h3>8. Datenschutz & Bestätigung</h3>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="wahrheitsgemaess" name="wahrheitsgemaess" required>
+                    <label for="wahrheitsgemaess" class="required">
+                        Ich bestätige, dass alle Angaben wahrheitsgemäß sind und ich zur Antragstellung berechtigt bin.
+                    </label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="datenschutz" name="datenschutz" required>
+                    <label for="datenschutz" class="required">
+                        Ich habe die <a href="/datenschutz" target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen und bin damit einverstanden, dass meine Angaben zur Bearbeitung dieses Antrags verarbeitet werden.
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="submit-section">
+                <button type="submit" class="submit-button">Löschantrag absenden</button>
+                <p class="help-text" style="text-align: center; margin-top: 15px;">
+                    Sie erhalten innerhalb von 48 Stunden eine Rückmeldung per E-Mail
+                </p>
+            </div>
+        </form>
+
+        <!-- Kontaktinformationen -->
+        <div class="contact-info">
+            <h3>📞 Alternative Kontaktmöglichkeiten</h3>
+            <p>Sie können uns auch auf folgenden Wegen erreichen:</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:datenschutz@totenbilder.at">datenschutz@totenbilder.at</a></p>
+            <p><strong>Telefon:</strong> [Ihre Telefonnummer]</p>
+            <p><strong>Erreichbarkeit:</strong> Montag bis Freitag, 9:00 - 17:00 Uhr</p>
+            <p><strong>Postadresse:</strong><br>
+            Heimat- und Kulturverein Vorchdorf<br>
+            [Ihre Adresse]</p>
+            <p style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <strong>Hinweis:</strong> In dringenden Fällen rufen Sie uns bitte direkt an. Wir nehmen jedes Anliegen sehr ernst und behandeln es mit höchster Priorität.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Formular-Handling (grundlegende Validierung)
+        document.getElementById('loeschantrag-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Sammle Formulardaten
+            const formData = new FormData(this);
+            
+            // Hier würde normalerweise die Daten an den Server gesendet werden
+            // Beispiel mit Fetch API:
+            /*
+            fetch('/api/loeschantrag', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Ihr Antrag wurde erfolgreich übermittelt. Sie erhalten in Kürze eine Bestätigung per E-Mail.');
+                this.reset();
+            })
+            .catch(error => {
+                alert('Es gab einen Fehler beim Absenden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.');
+            });
+            */
+            
+            // Vorläufige Bestätigung (entfernen, wenn echtes Backend implementiert ist)
+            alert('✓ Vielen Dank für Ihren Antrag!\n\nWir haben Ihre Anfrage erhalten und werden sie innerhalb von 48 Stunden bearbeiten.\n\nSie erhalten eine Bestätigungs-E-Mail an: ' + formData.get('email'));
+            this.reset();
+        });
+        
+        // File Upload Feedback
+        document.getElementById('nachweis').addEventListener('change', function(e) {
+            const fileName = e.target.files[0]?.name;
+            if (fileName) {
+                const uploadArea = this.parentElement;
+                uploadArea.innerHTML = '<p>✓ Datei hochgeladen: ' + fileName + '</p><p class="help-text">Klicken Sie erneut, um eine andere Datei zu wählen</p>';
+                uploadArea.onclick = function() {
+                    document.getElementById('nachweis').click();
+                };
+            }
+        });
+    </script>
+</body>
+</html>

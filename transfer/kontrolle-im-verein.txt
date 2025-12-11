@@ -1,0 +1,500 @@
+KONTROLLMECHANISMEN IM VEREIN
+Wie du mit deinem Bruder die Kontrolle über totenbilder.at behältst
+
+
+═══════════════════════════════════════════════════════════════════════════════
+GRUNDPROBLEM: VEREIN = DEMOKRATIE
+═══════════════════════════════════════════════════════════════════════════════
+
+WARNUNG: Ein Verein ist per Definition demokratisch!
+- Mitglieder haben Stimmrecht in der Generalversammlung
+- Generalversammlung kann Vorstand abwählen
+- Statutenänderungen möglich (mit 2/3-Mehrheit)
+
+→ 100% Kontrolle wie bei einer GmbH ist NICHT möglich!
+
+ABER: Es gibt SEHR wirksame Mechanismen, um Kontrolle zu sichern!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+STRATEGIE 1: GESCHLOSSENER GRÜNDERKREIS (80% Kontrolle)
+═══════════════════════════════════════════════════════════════════════════════
+
+KONZEPT: Nur wenige vertrauenswürdige Gründungsmitglieder
+
+UMSETZUNG:
+
+1. GRÜNDUNGSMITGLIEDER: Nur 4-6 Personen
+   --------------------------------------
+   ✓ Du
+   ✓ Dein Bruder
+   ✓ Vater (falls vertrauenswürdig)
+   ✓ 1-2 weitere enge Vertraute (Partner, alter Freund)
+   
+   → Diese sind "Ordentliche Mitglieder" mit vollem Stimmrecht
+
+2. ALLE ANDEREN: Nur Fördermitglieder
+   ------------------------------------
+   ✓ Fördermitglieder haben KEIN Stimmrecht (siehe § 4 Statuten)
+   ✓ Sie dürfen nicht an Generalversammlung teilnehmen
+   ✓ Sie können Vorstand NICHT abwählen
+   
+   → Standard-Nutzer, Unterstützer, Spender = Fördermitglieder
+
+3. AUFNAHMEVERFAHREN STRENG
+   --------------------------
+   ✓ Neue ordentliche Mitglieder nur auf Vorstandsbeschluss
+   ✓ Ihr habt als Vorstand VETO-Recht
+   ✓ In Statuten: "Aufnahme ohne Begründung ablehnbar"
+
+
+ERGEBNIS:
+→ Generalversammlung besteht nur aus euch 4-6 Gründern
+→ Ihr habt IMMER die Mehrheit (solange ihr euch einig seid!)
+→ Risiko: Wenn 3 von 5 Gründern gegen euch sind, verliert ihr Kontrolle
+
+
+RECHTSLAGE:
+✓ Völlig legal und üblich bei Vereinen
+✓ Viele Vereine machen das so (z.B. Sportvereine mit "aktiven" vs. "passiven" Mitgliedern)
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+STRATEGIE 2: ERWEITERTE VORSTANDSBEFUGNISSE (90% Kontrolle)
+═══════════════════════════════════════════════════════════════════════════════
+
+KONZEPT: Vorstand bekommt MAXIMALE Befugnisse in den Statuten
+
+UMSETZUNG IN STATUTEN:
+
+1. VORSTAND ENTSCHEIDET ÜBER ALLES WICHTIGE
+   -----------------------------------------
+   § 13 erweitern um:
+   
+   "Dem Vorstand obliegt die Leitung des Vereins. Er entscheidet über:
+    a) Alle laufenden Geschäfte
+    b) Alle Verträge und Rechtsgeschäfte
+    c) Aufnahme und Ausschluss von Mitgliedern
+    d) Verwendung der Finanzmittel bis €50.000 pro Projekt
+    e) Strategische Ausrichtung der Plattform
+    f) Partnerschaften und Kooperationen
+    g) Anstellung von Personal
+    
+    Die Generalversammlung kann Vorstandsbeschlüsse nur mit 2/3-Mehrheit 
+    aufheben."
+
+2. GENERALVERSAMMLUNG NUR ALLE 2 JAHRE
+   -------------------------------------
+   (Ist bereits so in euren Statuten)
+   → Weniger Gelegenheiten für Machtkämpfe
+
+3. VORSTAND IST SELBSTERGÄNZEND
+   -----------------------------
+   § 12 erweitern:
+   
+   "Bei Ausscheiden eines Vorstandsmitglieds kann der Vorstand selbst ein 
+    Ersatzmitglied kooptieren, ohne die Generalversammlung einzuberufen.
+    Diese Kooptierung gilt bis zur nächsten Generalversammlung."
+   
+   → Ihr könnt selbst entscheiden, wer nachkommt!
+
+4. LANGE KÜNDIGUNGSFRISTEN FÜR VORSTANDSABWAHL
+   --------------------------------------------
+   § 12 erweitern:
+   
+   "Die Abberufung von Vorstandsmitgliedern ist nur bei wichtigem Grund 
+    möglich (grobe Pflichtverletzung, Veruntreuung, strafrechtliche 
+    Verurteilung). Eine Abberufung ohne wichtigen Grund ist unzulässig."
+
+
+ERGEBNIS:
+→ Ihr als Vorstand habt quasi uneingeschränkte Macht
+→ Generalversammlung kann euch kaum abwählen
+→ Selbst wenn, könnt ihr euch selbst wieder ergänzen
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+STRATEGIE 3: AUSGEKLÜGELTE VORSTANDSSTRUKTUR (95% Kontrolle)
+═══════════════════════════════════════════════════════════════════════════════
+
+KONZEPT: Du und dein Bruder habt die Schlüsselpositionen
+
+OPTIMALE VORSTANDSSTRUKTUR:
+
+Obmann: DU
+Stellvertreter: DEIN BRUDER
+Kassier: Vertrauensperson (z.B. Vater, Partner)
+Schriftführer: Vertrauensperson
+
+WICHTIG: Vertretungsregelung in Statuten!
+
+§ 14 ändern auf:
+
+"VERTRETUNG NACH AUSSEN:
+Der Verein wird nach außen vertreten:
+
+a) Bei Geschäften bis €10.000: Obmann ODER Stellvertreter (Einzelvertretung)
+b) Bei Geschäften über €10.000: Obmann UND Stellvertreter (beide gemeinsam!)
+c) Bei strategischen Entscheidungen: Obmann UND Stellvertreter
+
+Ohne Zustimmung von Obmann UND Stellvertreter können keine strategischen 
+Entscheidungen getroffen werden (z.B. Verkauf der Plattform, Auflösung, 
+grundlegende Geschäftsmodell-Änderungen)."
+
+
+ERGEBNIS:
+→ Du UND dein Bruder müssen BEIDEN zustimmen bei wichtigen Dingen
+→ Andere Vorstandsmitglieder können alleine nichts Großes entscheiden
+→ Doppelte Absicherung
+
+
+ZUSATZ: CASTING VOTE (Stichentscheid)
+
+§ 13 erweitern:
+
+"Bei Pattsituationen im Vorstand (2:2 Stimmen) hat der Obmann das 
+entscheidende Stimmrecht (Casting Vote)."
+
+→ Du als Obmann hast im Zweifel das letzte Wort!
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+STRATEGIE 4: IP-RECHTE AUSSERHALB DES VEREINS (99% Kontrolle!)
+═══════════════════════════════════════════════════════════════════════════════
+
+KONZEPT: Die wertvollsten Assets gehören NICHT dem Verein!
+
+GENIALE KONSTRUKTION:
+
+1. MARKENRECHTE
+   -------------
+   ✓ "totenbilder.at" als Marke PRIVAT anmelden (€300)
+   ✓ Markeninhaber: Du + dein Bruder (je 50%)
+   ✓ Verein bekommt nur LIZENZ zur Nutzung
+   
+   Patent- und Markenamt:
+   www.patentamt.at
+   Kosten: €270 (elektronisch) + €70 (pro Klasse)
+
+2. DOMAIN
+   -------
+   ✓ totenbilder.at bleibt auf DEINEN Namen registriert
+   ✓ NICHT auf Vereinsnamen umschreiben!
+   ✓ Verein bekommt Nutzungsrecht
+
+3. SOURCE CODE / DATENBANK
+   ------------------------
+   Variante A (Einfach):
+   ✓ Code gehört dem Verein (da mit Vereinsmitteln entwickelt)
+   
+   Variante B (Sicherer):
+   ✓ Du entwickelst Code PRIVAT (in deiner Freizeit, eigener Laptop)
+   ✓ Verein bekommt LIZENZ zur Nutzung
+   ✓ Bei Vereinsauflösung: Code bleibt bei dir!
+
+4. LIZENZVERTRAG VEREIN ↔ GRÜNDER
+   --------------------------------
+   
+   MUSTER:
+   
+   "LIZENZVERTRAG
+   
+   zwischen
+   Martin Fischer & [Bruder], (nachfolgend 'Lizenzgeber')
+   und
+   Verein totenbilder.at (nachfolgend 'Lizenznehmer')
+   
+   § 1 Lizenzgegenstand
+   Die Lizenzgeber gewähren dem Lizenznehmer das nicht-ausschließliche 
+   Recht zur Nutzung folgender Assets:
+   - Marke 'totenbilder.at'
+   - Domain totenbilder.at
+   - Software und Datenbank (optional)
+   
+   § 2 Lizenzgebühr
+   Die Lizenz ist entgeltlich. Der Lizenznehmer zahlt eine jährliche 
+   Lizenzgebühr von EUR 12.000 (= EUR 1.000/Monat) an die Lizenzgeber.
+   
+   § 3 Kündigung
+   Die Lizenzgeber können den Vertrag mit 6 Monaten Frist kündigen,
+   insbesondere wenn:
+   - Der Verein von Dritten übernommen wird
+   - Die Lizenzgeber nicht mehr im Vorstand sind
+   - Der Verein gegen die Vereinszwecke verstößt
+   
+   § 4 Bei Vertragsende
+   Bei Vertragsende muss der Verein die Nutzung aller lizenzierten 
+   Assets einstellen. Alle Rechte fallen zurück an die Lizenzgeber."
+
+
+ERGEBNIS:
+→ Selbst wenn jemand den Verein übernimmt, gehört ihm NICHTS!
+→ Keine Marke, keine Domain, kein Code
+→ Du + Bruder könntet einfach neuen Verein gründen und weitermachen
+→ DAS IST DIE NUKLEAR-OPTION!
+
+
+ZUSÄTZLICHER BENEFIT:
+→ Ihr bekommt €12.000/Jahr Lizenzgebühr (= €6k pro Person)
+→ Das ist steuerlich absetzbar für den Verein
+→ Für euch: Einkommen (versteuern als sonstige Einkünfte)
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+STRATEGIE 5: AUFLÖSUNGSKLAUSEL (100% SCHUTZ BEI EXIT)
+═══════════════════════════════════════════════════════════════════════════════
+
+KONZEPT: Was passiert, wenn Verein aufgelöst wird?
+
+STANDARD (deine aktuellen Statuten):
+"Bei Auflösung fällt das Vermögen an eine ähnliche Organisation"
+
+PROBLEM:
+→ Du verlierst alles!
+→ Selbst wenn DU den Verein auflöst, bekommst du nichts
+
+
+BESSER: Erweiterte Auflösungsklausel
+
+§ 17 neu formulieren:
+
+"AUFLÖSUNG UND VERMÖGENSVERWENDUNG
+
+(1) Bei Auflösung des Vereins oder Wegfall des begünstigten Zwecks ist das 
+    Vereinsvermögen wie folgt zu verwenden:
+
+(2) Zunächst sind zurückzuerstatten:
+    a) Eingezahlte Kapitalanteile der Mitglieder
+    b) Sacheinlagen der Mitglieder (zum Zeitwert)
+    c) Ausstehende Lizenzgebühren an Lizenzgeber
+    d) Darlehen von Mitgliedern/Gründern
+
+(3) Vom verbleibenden Vermögen erhalten die GRÜNDUNGSMITGLIEDER eine 
+    angemessene Abfindung für ihre langjährige ehrenamtliche Tätigkeit 
+    und den Aufbau des Vereins (max. EUR 50.000 pro Gründungsmitglied).
+
+(4) Das darüber hinausgehende Vermögen fällt an eine Organisation mit 
+    ähnlichen Zielen, die von der letzten Generalversammlung zu bestimmen ist.
+    
+    Kann keine solche Organisation gefunden werden, fällt das Vermögen an 
+    das Land Oberösterreich mit der Auflage, es für kulturelle und 
+    wissenschaftliche Zwecke zu verwenden."
+
+
+WARNUNG: GRENZWERTIG!
+→ Punkt (3) ist rechtlich grenzwertig für Gemeinnützigkeit
+→ Finanzamt könnte das als "Gewinnausschüttung" sehen
+→ ABER: Viele Vereine haben solche Klauseln
+→ Alternative: Weglassen, dafür Lizenzmodell (Strategie 4)
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+STRATEGIE 6: GESELLSCHAFTSVERTRAG UNTER GRÜNDERN
+═══════════════════════════════════════════════════════════════════════════════
+
+KONZEPT: Privater Vertrag zwischen dir und deinem Bruder
+
+PARALLEL ZUM VEREIN: Gesellschaftsvertrag
+
+"GESELLSCHAFTSVERTRAG TOTENBILDER.AT
+zwischen Martin Fischer und [Bruder]
+
+§ 1 Zweck
+Die Parteien gründen gemeinsam den 'Verein totenbilder.at' und verpflichten
+sich zur gemeinsamen Führung dieses Projekts.
+
+§ 2 Rollenverteilung
+- Martin Fischer: Obmann, Produktentwicklung, Technologie
+- [Bruder]: Stellvertretender Obmann, Geschäftsentwicklung, Finanzen
+
+§ 3 Gegenseitige Verpflichtungen
+Beide Parteien verpflichten sich:
+a) Mindestens 5 Jahre im Vorstand zu bleiben
+b) Keine strategischen Entscheidungen ohne Zustimmung des anderen zu treffen
+c) Bei Meinungsverschiedenheiten externe Mediation anzustreben
+d) Bei Austritt eines Partners: Dem anderen das Vorkaufsrecht zu gewähren
+
+§ 4 Austrittsregelung
+Wenn einer der Partner austreten will:
+- 12 Monate Kündigungsfrist
+- Der verbleibende Partner kann das Projekt übernehmen
+- Abfindung: [zu definieren, z.B. EUR 50.000 oder 50% des Vereinsvermögens]
+
+§ 5 Non-Compete (Wettbewerbsverbot)
+Für 2 Jahre nach Austritt verpflichtet sich der austretende Partner:
+- Kein konkurrenzhaftes Projekt zu starten (Gedenkseiten, Totenbilder)
+- Keine Mitarbeiter/Partner des Vereins abzuwerben
+- Geschäftsgeheimnisse zu wahren
+
+Vertragsstrafe bei Verstoß: EUR 50.000"
+
+
+VORTEIL:
+→ Klare Regeln zwischen euch beiden
+→ Rechtlich bindend (Zivilrecht)
+→ Unabhängig vom Vereinsrecht
+
+
+TIPP: Von Anwalt aufsetzen lassen (EUR 500-1.000)
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ZUSAMMENFASSUNG: DIE OPTIMALE KONTROLLSTRUKTUR
+═══════════════════════════════════════════════════════════════════════════════
+
+KOMBINATION ALLER STRATEGIEN:
+
+STUFE 1: Geschlossener Gründerkreis (80% Kontrolle)
+→ Nur 4-6 vertrauenswürdige ordentliche Mitglieder
+→ Alle anderen: Fördermitglieder ohne Stimmrecht
+
+STUFE 2: Erweiterte Vorstandsbefugnisse (90% Kontrolle)
+→ Vorstand entscheidet über alles Wesentliche
+→ Generalversammlung stark eingeschränkt
+
+STUFE 3: Vorstandsstruktur (95% Kontrolle)
+→ Du = Obmann, Bruder = Stellvertreter
+→ Beide müssen zustimmen bei strategischen Entscheidungen
+→ Du hast Casting Vote
+
+STUFE 4: IP-Rechte außerhalb (99% Kontrolle)
+→ Marke & Domain gehören euch privat
+→ Verein hat nur Lizenz (€12k/Jahr Gebühr)
+→ Bei Übernahme: Ihr zieht Lizenz zurück → Verein ist wertlos
+
+STUFE 5: Gesellschaftsvertrag (100% Schutz untereinander)
+→ Klare Regeln zwischen dir und Bruder
+→ Non-Compete, Vorkaufsrecht, Abfindung
+
+
+ERGEBNIS:
+→ Praktisch UNKONTROLLIERBAR von außen
+→ Selbst bei Vereinsübernahme: Ihr behaltet Marke & Domain
+→ Einziges Risiko: Streit zwischen dir und deinem Bruder
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+WAS IST REALISTISCH MÖGLICH?
+═══════════════════════════════════════════════════════════════════════════════
+
+EMPFEHLUNG FÜR EUCH:
+
+PHASE 1 (Start): Basis-Absicherung
+✓ Geschlossener Gründerkreis (nur Familie/engste Freunde)
+✓ Optimale Vorstandsstruktur (Du Obmann, Bruder Stv.)
+✓ Erweiterte Vorstandsbefugnisse in Statuten
+
+→ Reicht für erste 2-3 Jahre völlig aus!
+
+PHASE 2 (Bei Erfolg): Markenrechte sichern
+✓ Marke "totenbilder.at" privat anmelden (€300)
+✓ Lizenzvertrag mit Verein
+✓ Gesellschaftsvertrag zwischen dir und Bruder
+
+→ Wenn Projekt €100k+ Umsatz macht
+
+PHASE 3 (Bei großem Erfolg): Umstrukturierung?
+✓ Option: Verein + GmbH-Konstruktion
+✓ GmbH macht operative Geschäfte (dir + Bruder als Geschäftsführer)
+✓ Verein bleibt für Gemeinnützigkeit & Förderungen
+
+→ Ab €500k+ Umsatz sinnvoll
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+RECHTLICHE GRENZEN - WAS GEHT NICHT?
+═══════════════════════════════════════════════════════════════════════════════
+
+❌ NICHT MÖGLICH:
+
+1. Vereinsmitglieder komplett entrechten
+   → Mindestrechte gibt es immer (Vereinsgesetz)
+
+2. Generalversammlung komplett abschaffen
+   → Alle 2 Jahre ist Minimum (§ 9 Statuten)
+
+3. Vorstand für "immer" einsetzen
+   → Maximal 5 Jahre Funktionsperiode möglich
+
+4. Gewinnausschüttung wie bei GmbH
+   → Verstößt gegen Gemeinnützigkeit
+
+5. Verein "verkaufen"
+   → Verein kann man nicht verkaufen (nur Assets)
+
+
+ABER: Mit den oben genannten Mechanismen kommt ihr dem sehr nahe!
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+FALLBEISPIEL: WAS WENN...?
+═══════════════════════════════════════════════════════════════════════════════
+
+SZENARIO 1: Gründungsmitglied will euch rauswerfen
+--------------------------------------------------
+→ Kann er nicht! Ihr braucht 2/3-Mehrheit zur Vorstandsabwahl
+→ Wenn nur 5 Gründer: Er braucht 4 Stimmen → Unmöglich wenn ihr zusammenhaltet
+
+SZENARIO 2: Alle Gründer gegen euch (3 vs. 2)
+----------------------------------------------
+→ Theoretisch könnten sie euch abwählen (2/3 Mehrheit = 4 von 5)
+→ ABER: Marke & Domain gehören euch → Neue Vorstand hat nichts
+→ Ihr gründet neuen Verein mit selber Marke → Game over für die anderen
+
+SZENARIO 3: Streit zwischen dir und deinem Bruder
+--------------------------------------------------
+→ Hier hilft nur Gesellschaftsvertrag mit Mediation & Abfindungsregelung
+→ Oder: Verkauf an Dritten, beide bekommen 50%
+
+SZENARIO 4: Verein wird von Investor gekauft
+---------------------------------------------
+→ Verein kann man nicht kaufen!
+→ Aber: Investor könnte Mehrheit der ordentlichen Mitglieder "übernehmen"
+→ Schutz: IP-Rechte außerhalb + geschlossener Gründerkreis
+
+SZENARIO 5: Finanzamt streicht Gemeinnützigkeit wegen Kontrolle
+----------------------------------------------------------------
+→ Unwahrscheinlich wenn ihr es geschickt macht
+→ Problem nur bei: Gewinnausschüttung, überhöhte Gehälter, Selbstbereicherung
+→ Kontrolle alleine ist KEIN Problem!
+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+MEIN VORSCHLAG FÜR EURE SITUATION
+═══════════════════════════════════════════════════════════════════════════════
+
+GRÜNDUNGSMITGLIEDER: NUR 4 PERSONEN
+------------------------------------
+1. Du (Obmann)
+2. Dein Bruder (Stellvertreter)
+3. Dein Vater oder vertrauenswürdiger Freund (Kassier)
+4. Partner von einem von euch oder zweiter Freund (Schriftführer)
+
+→ 4 ist PERFEKT: Ihr zwei habt immer Mehrheit (2 von 4 = 50%)
+→ Plus Casting Vote für dich = ihr seid unkontrollierbar
+
+VORSTAND: Erweiterte Befugnisse
+--------------------------------
+→ Vorstand entscheidet über alles außer Statutenänderung
+→ Vertretung: Ihr beide gemeinsam bei Geschäften >€10k
+
+MARKE: Privat anmelden
+-----------------------
+→ Sofort nach Vereinsgründung
+→ Kostet €300, gibt euch 99% Kontrolle
+
+GESELLSCHAFTSVERTRAG: Nach 1 Jahr
+----------------------------------
+→ Wenn Projekt läuft, zwischen dir und Bruder
+
+→ Damit seid ihr 95% sicher!
