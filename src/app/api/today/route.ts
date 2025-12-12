@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
 
         const sql = `
             SELECT 
-              a.nid, a.Name, a.Vorname, a.Nachname, a.Ledigname, 
+              a.nid, a.alias, a.Name, a.Vorname, a.Nachname, a.Ledigname, 
               a.Ort, a.Strasse, a.Geschlecht, a.Bekenntnis, 
               a.Beruf1, a.Beruf2, a.Geburtsjahr, 
               a.Sterbedatum, a.Sterbetag, a.Sterbemonat, a.Sterbejahr, a.Sterbealter, 
@@ -44,6 +44,7 @@ export async function GET(request: NextRequest) {
             if (!peopleMap.has(row.nid)) {
                 peopleMap.set(row.nid, {
                     nid: row.nid,
+                    alias: row.alias,
                     Name: row.Name,
                     Vorname: row.Vorname,
                     Nachname: row.Nachname,

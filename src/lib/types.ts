@@ -1,5 +1,6 @@
 export interface TotenbildRecord {
     nid: number;
+    alias: string | null;
     Name: string; // Often "Nachname Vorname" or similar
     Vorname: string | null;
     Nachname: string | null;

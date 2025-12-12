@@ -18,18 +18,14 @@ const formatDeathDate = (p: TotenbildRecord) => {
 // Force dynamic behavior since we query DB directly
 export const dynamic = 'force-dynamic';
 
-export default async function PersonPage(props: { params: Promise<{ id: string }> }) {
+export default async function TotenbildPage(props: { params: Promise<{ alias: string }> }) {
     const params = await props.params;
-    const idValue = parseInt(params.id, 10);
-
-    if (isNaN(idValue)) {
-        notFound();
-    }
+    const aliasValue = params.alias;
 
     let person: TotenbildRecord | null = null;
 
     try {
-        // 1. Try fetching from DB
+        // 1. Try fetching from DB using alias
         if (process.env.DB_HOST) {
             const sql = `
             SELECT 
@@ -41,10 +37,10 @@ export default async function PersonPage(props: { params: Promise<{ id: string }
               b.filename, b.filesize, b.height, b.width, b.filemime
             FROM totenbilder a
             LEFT JOIN totenbilder_bilder b ON a.nid = b.nid
-            WHERE a.nid = ?
+            WHERE a.alias = ?
           `;
 
-            const rows = await query(sql, [idValue]) as any[];
+            const rows = await query(sql, [aliasValue]) as any[];
 
             if (rows.length > 0) {
                 // Group logic tailored for single record
@@ -85,12 +81,12 @@ export default async function PersonPage(props: { params: Promise<{ id: string }
             }
         }
     } catch (error) {
-        console.error("Error fetching person:", error);
+        console.error("Error fetching person by alias:", error);
     }
 
-    // 2. Fallback to dummy data
+    // 2. Fallback to dummy data (search by alias if available)
     if (!person) {
-        const dummy = DUMMY_DATA.find(p => p.nid === idValue);
+        const dummy = DUMMY_DATA.find(p => p.alias === aliasValue);
         if (dummy) {
             person = dummy;
         }

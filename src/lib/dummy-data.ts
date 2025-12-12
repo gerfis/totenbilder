@@ -3,6 +3,7 @@ import { TotenbildRecord } from './types';
 export const DUMMY_DATA: TotenbildRecord[] = [
     {
         nid: 101,
+        alias: 'huber-maria',
         Name: 'Huber Maria',
         Vorname: 'Maria',
         Nachname: 'Huber',
@@ -27,6 +28,7 @@ export const DUMMY_DATA: TotenbildRecord[] = [
     },
     {
         nid: 102,
+        alias: 'hofer-franz',
         Name: 'Hofer Franz',
         Vorname: 'Franz',
         Nachname: 'Hofer',
@@ -50,6 +52,7 @@ export const DUMMY_DATA: TotenbildRecord[] = [
     },
     {
         nid: 103,
+        alias: 'weber-anna',
         Name: 'Weber Anna',
         Vorname: 'Anna',
         Nachname: 'Weber',
@@ -73,6 +76,7 @@ export const DUMMY_DATA: TotenbildRecord[] = [
     },
     {
         nid: 104,
+        alias: 'wagner-johann',
         Name: 'Wagner Johann',
         Vorname: 'Johann',
         Nachname: 'Wagner',

@@ -274,7 +274,7 @@ function SearchContent() {
 
                   return (
                     <Link
-                      href={`/person/${person.nid}`}
+                      href={person.alias ? `/totenbild/${person.alias}` : `/person/${person.nid}`}
                       key={person.nid}
                       className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--c-border)] flex flex-col group cursor-pointer h-full"
                     >
