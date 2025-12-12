@@ -4,6 +4,7 @@ import { TotenbildRecord, getImageUrl } from '@/lib/types';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import BackButton from '@/components/BackButton';
+import ZoomableImage from '@/components/ZoomableImage';
 import { DUMMY_DATA } from '@/lib/dummy-data';
 
 // Helper to reliably format death date (reused from homepage logic)
@@ -111,13 +112,12 @@ export default async function PersonPage(props: { params: Promise<{ id: string }
                     <div className="lg:w-1/2 bg-[var(--c-bg-main)] p-8 border-b lg:border-b-0 lg:border-r border-[var(--c-border)]">
                         <div className="space-y-8">
                             {person.images.map((img, idx) => (
-                                <div key={idx} className="relative shadow-lg rounded-sm overflow-hidden bg-white">
-                                    <img
-                                        src={getImageUrl(img.filename)}
-                                        alt={`${person?.Name} - Bild ${idx + 1}`}
-                                        className="w-full h-auto object-contain max-h-[80vh] mx-auto filter sepia-[0.1]"
-                                    />
-                                </div>
+                                <ZoomableImage
+                                    key={idx}
+                                    filename={img.filename}
+                                    alt={`${person?.Name} - Bild ${idx + 1}`}
+                                    index={idx}
+                                />
                             ))}
                             {person.images.length === 0 && (
                                 <div className="h-64 flex items-center justify-center text-[var(--c-text-secondary)] italic border border-dashed border-[var(--c-border)]">
