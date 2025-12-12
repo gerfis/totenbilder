@@ -6,6 +6,8 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const nameQuery = searchParams.get('name');
     const locationQuery = searchParams.get('location');
+    const birthYearQuery = searchParams.get('birthYear');
+    const deathYearQuery = searchParams.get('deathYear');
     const page = parseInt(searchParams.get('page') || '1');
     const limit = parseInt(searchParams.get('limit') || '8');
     const offset = (page - 1) * limit;
@@ -26,6 +28,18 @@ export async function GET(request: NextRequest) {
         whereClause += ` AND (a.Ort LIKE ? OR a.Strasse LIKE ?)`;
         const like = `%${locationQuery}%`;
         params.push(like, like);
+        isSearch = true;
+    }
+
+    if (birthYearQuery) {
+        whereClause += ` AND a.Geburtsjahr = ?`;
+        params.push(birthYearQuery);
+        isSearch = true;
+    }
+
+    if (deathYearQuery) {
+        whereClause += ` AND a.Sterbejahr = ?`;
+        params.push(deathYearQuery);
         isSearch = true;
     }
 

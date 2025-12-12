@@ -11,6 +11,8 @@ function SearchContent() {
 
   const [search, setSearch] = useState(searchParams.get('name') || '');
   const [location, setLocation] = useState(searchParams.get('location') || '');
+  const [birthYear, setBirthYear] = useState(searchParams.get('birthYear') || '');
+  const [deathYear, setDeathYear] = useState(searchParams.get('deathYear') || '');
   const [people, setPeople] = useState<TotenbildRecord[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -25,6 +27,8 @@ function SearchContent() {
       const params = new URLSearchParams();
       if (search) params.set('name', search);
       if (location) params.set('location', location);
+      if (birthYear) params.set('birthYear', birthYear);
+      if (deathYear) params.set('deathYear', deathYear);
 
       // Update URL without adding to history stack for every keystroke
       // but ensuring the current history entry represents the current search
@@ -33,7 +37,7 @@ function SearchContent() {
       fetchData(1);
     }, 500);
     return () => clearTimeout(timer);
-  }, [search, location, router]);
+  }, [search, location, birthYear, deathYear, router]);
 
   async function fetchData(targetPage: number) {
     if (targetPage === 1) {
@@ -47,6 +51,8 @@ function SearchContent() {
       const params = new URLSearchParams();
       if (search) params.append('name', search);
       if (location) params.append('location', location);
+      if (birthYear) params.append('birthYear', birthYear);
+      if (deathYear) params.append('deathYear', deathYear);
       params.append('page', targetPage.toString());
       params.append('limit', '20');
 
@@ -60,7 +66,9 @@ function SearchContent() {
           const fullName = `${p.Nachname} ${p.Vorname} ${p.Name}`.toLowerCase();
           const matchName = fullName.includes(search.toLowerCase());
           const matchLoc = (p.Ort || '').toLowerCase().includes(location.toLowerCase());
-          return matchName && matchLoc;
+          const matchBirth = !birthYear || (p.Geburtsjahr?.toString() === birthYear);
+          const matchDeath = !deathYear || (p.Sterbejahr?.toString() === deathYear);
+          return matchName && matchLoc && matchBirth && matchDeath;
         });
 
         // Simulating pagination for dummy data
@@ -71,7 +79,7 @@ function SearchContent() {
         let resultSlice: TotenbildRecord[] = [];
 
         // Match API behavior: Only show 20 on initial load (empty search), sorted by death date
-        if (!search && !location) {
+        if (!search && !location && !birthYear && !deathYear) {
           const sortedDummy = [...filteredDummy].sort((a, b) => {
             return (b.Sterbejahr || 0) - (a.Sterbejahr || 0);
           });
@@ -165,6 +173,29 @@ function SearchContent() {
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                 />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-bold text-[var(--c-text-secondary)] uppercase tracking-wider mb-2">Geburtsjahr</label>
+                  <input
+                    type="number"
+                    placeholder="YYYY"
+                    className="input w-full text-sm"
+                    value={birthYear}
+                    onChange={(e) => setBirthYear(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-[var(--c-text-secondary)] uppercase tracking-wider mb-2">Sterbejahr</label>
+                  <input
+                    type="number"
+                    placeholder="YYYY"
+                    className="input w-full text-sm"
+                    value={deathYear}
+                    onChange={(e) => setDeathYear(e.target.value)}
+                  />
+                </div>
               </div>
 
               <div className="pt-2">
@@ -278,7 +309,7 @@ function SearchContent() {
             <div className="text-center py-20 bg-white rounded-lg border border-[var(--c-border)]">
               <p className="text-xl text-[var(--c-text-secondary)] mb-2">Keine Einträge gefunden</p>
               <button
-                onClick={() => { setSearch(''); setLocation(''); fetchData(1); }}
+                onClick={() => { setSearch(''); setLocation(''); setBirthYear(''); setDeathYear(''); fetchData(1); }}
                 className="text-[var(--c-accent)] hover:underline"
               >
                 Filter zurücksetzen
