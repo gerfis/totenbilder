@@ -100,18 +100,7 @@ export default async function PersonPage(props: { params: Promise<{ id: string }
     return (
         <main className="min-h-screen bg-[var(--c-bg-main)]">
 
-            {/* Navigation / Header */}
-            <nav className="border-b border-[var(--c-border)] bg-white sticky top-0 z-20 shadow-sm">
-                <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
-                    <Link href="/" className="flex items-center gap-2 text-[var(--c-text-secondary)] hover:text-[var(--c-accent)] transition-colors">
-                        <span className="text-xl">←</span>
-                        <span className="text-sm font-medium uppercase tracking-wider">Zurück zur Übersicht</span>
-                    </Link>
-                    <div className="text-sm text-[var(--c-text-secondary)] hidden md:block">
-                        Totenbilder Archiv
-                    </div>
-                </div>
-            </nav>
+
 
             <div className="container mx-auto px-4 py-12">
                 <div className="max-w-6xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-[var(--c-border)] flex flex-col lg:flex-row">

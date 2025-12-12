@@ -2,7 +2,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Header from '@/components/Header';
+
 import { getImageUrl, TotenbildRecord } from '@/lib/types';
 
 export default function TodayPage() {
@@ -41,7 +41,7 @@ export default function TodayPage() {
 
     return (
         <main className="min-h-screen pb-20">
-            <Header />
+
 
             <div className="container mb-12 relative z-10">
                 <div className="text-center">

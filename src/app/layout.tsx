@@ -19,7 +19,9 @@ export const metadata: Metadata = {
   description: 'Ein würdevolles Gedenken.',
 };
 
+import Link from 'next/link';
 import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 export default function RootLayout({
   children,
@@ -28,7 +30,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+      </head>
       <body className="min-h-screen flex flex-col">
+        <Header />
         <div className="flex-grow">{children}</div>
         <Footer />
       </body>

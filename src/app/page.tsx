@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { DUMMY_DATA } from '@/lib/dummy-data';
 import { getImageUrl, TotenbildRecord } from '@/lib/types';
-import Header from '@/components/Header';
 
 export default function Home() {
   const [search, setSearch] = useState('');
@@ -36,7 +35,7 @@ export default function Home() {
       if (search) params.append('name', search);
       if (location) params.append('location', location);
       params.append('page', targetPage.toString());
-      params.append('limit', '8');
+      params.append('limit', '20');
 
       const res = await fetch(`/api/search?${params.toString()}`);
       const data = await res.json();
@@ -52,13 +51,13 @@ export default function Home() {
         });
 
         // Simulating pagination for dummy data
-        const limit = 8;
+        const limit = 20;
         const startIndex = (targetPage - 1) * limit;
         const endIndex = startIndex + limit;
 
         let resultSlice: TotenbildRecord[] = [];
 
-        // Match API behavior: Only show 8 on initial load (empty search), sorted by death date
+        // Match API behavior: Only show 20 on initial load (empty search), sorted by death date
         if (!search && !location) {
           const sortedDummy = [...filteredDummy].sort((a, b) => {
             return (b.Sterbejahr || 0) - (a.Sterbejahr || 0);
@@ -88,7 +87,7 @@ export default function Home() {
           });
         }
 
-        if (data.length < 8) setHasMore(false);
+        if (data.length < 20) setHasMore(false);
         setIsDbConfigured(true);
       } else {
         if (targetPage === 1) setPeople([]);
@@ -120,9 +119,13 @@ export default function Home() {
 
   return (
     <main className="min-h-screen pb-20 pt-8 w-full px-4 md:px-8">
-      <Header showDemoBanner={!isDbConfigured} />
+      {!isDbConfigured && (
+        <div className="w-full bg-amber-100 text-amber-800 text-xs text-center py-2 mb-6 rounded border border-amber-200">
+          Demo Modus: Keine Datenbankverbindung erkannt. Zeige Beispieldaten.
+        </div>
+      )}
 
-      <div className="flex flex-col md:flex-row gap-6 mt-8">
+      <div className="flex flex-col md:flex-row gap-6">
         {/* Sidebar */}
         <aside className="w-full md:w-64 lg:w-72 shrink-0">
           <div className="bg-white p-5 rounded-lg shadow-sm border border-[var(--c-border)] sticky top-4">
