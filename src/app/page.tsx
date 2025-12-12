@@ -162,6 +162,19 @@ function SearchContent() {
     return p.Sterbedatum || p.Sterbejahr?.toString() || "—";
   };
 
+  const calculateAge = (p: TotenbildRecord): string => {
+    // If Sterbealter is already in the data, use it
+    if (p.Sterbealter) {
+      return `${p.Sterbealter}`;
+    }
+    // Otherwise calculate from birth and death year
+    if (p.Geburtsjahr && p.Sterbejahr) {
+      const age = p.Sterbejahr - p.Geburtsjahr;
+      return `${age}`;
+    }
+    return "—";
+  };
+
   return (
     <main className="min-h-screen pb-20 pt-8 w-full px-4 md:px-8">
       {!isDbConfigured && (
@@ -294,10 +307,14 @@ function SearchContent() {
                         </div>
 
                         <div className="mt-auto space-y-2 text-xs text-[var(--c-text-secondary)] border-t border-[var(--c-border)] pt-3 mx-2">
-                          <div className="grid grid-cols-2 gap-2 text-left">
-                            <div>
+                          <div className="grid grid-cols-3 gap-2 text-center">
+                            <div className="text-left">
                               <span className="block text-[10px] uppercase opacity-60">Geboren</span>
                               {person.Geburtsjahr || "—"}
+                            </div>
+                            <div>
+                              <span className="block text-[10px] uppercase opacity-60">Alter</span>
+                              <span className="font-medium text-[var(--c-text-primary)]">{calculateAge(person)}</span>
                             </div>
                             <div className="text-right">
                               <span className="block text-[10px] uppercase opacity-60">Gestorben</span>
