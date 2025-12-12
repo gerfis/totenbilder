@@ -1,12 +1,16 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { DUMMY_DATA } from '@/lib/dummy-data';
 import { getImageUrl, TotenbildRecord } from '@/lib/types';
 
-export default function Home() {
-  const [search, setSearch] = useState('');
-  const [location, setLocation] = useState('');
+function SearchContent() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const [search, setSearch] = useState(searchParams.get('name') || '');
+  const [location, setLocation] = useState(searchParams.get('location') || '');
   const [people, setPeople] = useState<TotenbildRecord[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -14,13 +18,22 @@ export default function Home() {
   const [hasMore, setHasMore] = useState(true);
   const [isDbConfigured, setIsDbConfigured] = useState(true);
 
-  // Debounce search
+  // Debounce search and URL update
   useEffect(() => {
     const timer = setTimeout(() => {
+      // Update URL to match state
+      const params = new URLSearchParams();
+      if (search) params.set('name', search);
+      if (location) params.set('location', location);
+
+      // Update URL without adding to history stack for every keystroke
+      // but ensuring the current history entry represents the current search
+      router.replace(`/?${params.toString()}`, { scroll: false });
+
       fetchData(1);
     }, 500);
     return () => clearTimeout(timer);
-  }, [search, location]);
+  }, [search, location, router]);
 
   async function fetchData(targetPage: number) {
     if (targetPage === 1) {
@@ -275,5 +288,13 @@ export default function Home() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen pt-8 px-4 text-center">Laden...</div>}>
+      <SearchContent />
+    </Suspense>
   );
 }

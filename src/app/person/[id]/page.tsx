@@ -3,6 +3,7 @@ import { query } from '@/lib/db';
 import { TotenbildRecord, getImageUrl } from '@/lib/types';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import BackButton from '@/components/BackButton';
 import { DUMMY_DATA } from '@/lib/dummy-data';
 
 // Helper to reliably format death date (reused from homepage logic)
@@ -103,6 +104,7 @@ export default async function PersonPage(props: { params: Promise<{ id: string }
 
 
             <div className="container mx-auto px-4 py-12">
+                <BackButton />
                 <div className="max-w-6xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-[var(--c-border)] flex flex-col lg:flex-row">
 
                     {/* Left Column: Images */}
