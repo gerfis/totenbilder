@@ -19,7 +19,10 @@ export default function TodayPage() {
             try {
                 const res = await fetch('/api/today');
                 const data = await res.json();
-                if (Array.isArray(data)) {
+                if (data.data && Array.isArray(data.data)) {
+                    setPeople(data.data);
+                } else if (Array.isArray(data)) {
+                    // Fallback for old format
                     setPeople(data);
                 }
             } catch (e) {

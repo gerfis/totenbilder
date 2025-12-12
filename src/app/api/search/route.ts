@@ -57,6 +57,15 @@ export async function GET(request: NextRequest) {
             throw new Error("DB_NOT_CONFIGURED");
         }
 
+        // Step 0: Get total count of matching records
+        const countSql = `
+            SELECT COUNT(DISTINCT a.nid) as total
+            FROM totenbilder a 
+            ${whereClause}
+        `;
+        const countRows = await query(countSql, params) as any[];
+        const totalCount = countRows[0]?.total || 0;
+
         // Step 1: Get IDs for the current page
         // We use string interpolation for LIMIT/OFFSET because param substitution can sometimes be tricky with types in mysql2 wrapper, 
         // but let's try to use params for limit/offset for safety if the wrapper supports it. 
@@ -78,7 +87,7 @@ export async function GET(request: NextRequest) {
         const idRows = await query(idSql, params) as any[];
 
         if (idRows.length === 0) {
-            return NextResponse.json([]);
+            return NextResponse.json({ data: [], total: totalCount });
         }
 
         const ids = idRows.map(r => r.nid);
@@ -156,7 +165,7 @@ export async function GET(request: NextRequest) {
         // Return array in the correct order (map iterates in insertion order, and we processed rows ordered by FIELD(nid))
         const people = Array.from(peopleMap.values());
 
-        return NextResponse.json(people);
+        return NextResponse.json({ data: people, total: totalCount });
 
     } catch (error: any) {
         console.error("Database Error:", error);

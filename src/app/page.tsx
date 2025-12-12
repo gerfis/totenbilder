@@ -14,6 +14,7 @@ function SearchContent() {
   const [birthYear, setBirthYear] = useState(searchParams.get('birthYear') || '');
   const [deathYear, setDeathYear] = useState(searchParams.get('deathYear') || '');
   const [people, setPeople] = useState<TotenbildRecord[]>([]);
+  const [totalCount, setTotalCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
   const [page, setPage] = useState(1);
@@ -71,6 +72,9 @@ function SearchContent() {
           return matchName && matchLoc && matchBirth && matchDeath;
         });
 
+        // Set total count for dummy data
+        setTotalCount(filteredDummy.length);
+
         // Simulating pagination for dummy data
         const limit = 20;
         const startIndex = (targetPage - 1) * limit;
@@ -97,11 +101,28 @@ function SearchContent() {
 
         if (resultSlice.length < limit) setHasMore(false);
 
-      } else if (Array.isArray(data)) {
+      } else if (data.data && Array.isArray(data.data)) {
+        // New API response format with { data: [], total: number }
+        setTotalCount(data.total || 0);
+
         if (targetPage === 1) {
-          setPeople(data);
+          setPeople(data.data);
         } else {
           // Filter out duplicates just in case, though API should handle it
+          setPeople(prev => {
+            const newIds = new Set(data.data.map((p: TotenbildRecord) => p.nid));
+            return [...prev, ...data.data.filter((p: TotenbildRecord) => !prev.some(existing => existing.nid === p.nid))];
+          });
+        }
+
+        if (data.data.length < 20) setHasMore(false);
+        setIsDbConfigured(true);
+      } else if (Array.isArray(data)) {
+        // Fallback for old API response format (just array)
+        if (targetPage === 1) {
+          setPeople(data);
+          setTotalCount(data.length);
+        } else {
           setPeople(prev => {
             const newIds = new Set(data.map(p => p.nid));
             return [...prev, ...data.filter(p => !prev.some(existing => existing.nid === p.nid))];
@@ -111,7 +132,10 @@ function SearchContent() {
         if (data.length < 20) setHasMore(false);
         setIsDbConfigured(true);
       } else {
-        if (targetPage === 1) setPeople([]);
+        if (targetPage === 1) {
+          setPeople([]);
+          setTotalCount(0);
+        }
         setHasMore(false);
       }
 
@@ -206,6 +230,12 @@ function SearchContent() {
                   Suchen
                 </button>
               </div>
+
+              <div className="text-center pt-2">
+                <span className="text-xs font-bold text-[var(--c-text-secondary)] uppercase tracking-wider">
+                  {isLoading ? 'Suche...' : (totalCount > 0 ? `${totalCount} Ergebnisse gefunden` : 'Keine Ergebnisse')}
+                </span>
+              </div>
             </div>
 
             <div className="mt-6 pt-4 border-t border-[var(--c-border)]">
@@ -222,11 +252,7 @@ function SearchContent() {
             <div className="text-center py-20 text-[var(--c-text-secondary)]">Lade Daten...</div>
           ) : (
             <>
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xs font-bold text-[var(--c-text-secondary)] uppercase tracking-wider">
-                  {people.length > 0 ? `${people.length} Ergebnisse` : 'Ergebnisse'}
-                </h2>
-              </div>
+
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 gallery-grid">
                 {people.map(person => {

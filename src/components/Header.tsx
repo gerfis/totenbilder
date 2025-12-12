@@ -7,19 +7,19 @@ interface HeaderProps {
 
 export default function Header({ showDemoBanner = false }: HeaderProps) {
     return (
-        <header className="bg-white border-b border-[var(--c-border)] mb-12 relative overflow-hidden">
+        <header className="bg-white border-b border-[var(--c-border)] mb-8 relative overflow-hidden">
             {showDemoBanner && (
                 <div className="absolute top-0 left-0 w-full bg-amber-100 text-amber-800 text-xs text-center py-1 z-20">
                     Demo Modus: Keine Datenbankverbindung erkannt. Zeige Beispieldaten.
                 </div>
             )}
-            <div className="w-full px-4 md:px-8 py-8 md:py-12 text-center relative z-10">
+            <div className="w-full px-4 md:px-8 py-4 md:py-6 text-center relative z-10">
                 <Link href="/" className="inline-block">
-                    <h1 className="text-4xl md:text-5xl font-serif text-[var(--c-text-primary)] mb-4 tracking-tight hover:opacity-80 transition-opacity">
+                    <h1 className="text-3xl md:text-4xl font-serif text-[var(--c-text-primary)] mb-2 tracking-tight hover:opacity-80 transition-opacity">
                         Totenbilder Archiv
                     </h1>
                 </Link>
-                <p className="text-[var(--c-text-secondary)] max-w-2xl mx-auto text-lg font-light mb-8">
+                <p className="text-[var(--c-text-secondary)] max-w-2xl mx-auto text-base font-light mb-4">
                     Ein würdevolles Gedenken. Bewahrung der Erinnerung an vergangene Generationen.
                 </p>
 

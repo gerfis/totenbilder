@@ -78,7 +78,7 @@ export async function GET(request: NextRequest) {
         }
 
         const people = Array.from(peopleMap.values());
-        return NextResponse.json(people);
+        return NextResponse.json({ data: people, total: people.length });
 
     } catch (error: any) {
         console.error("Database Error:", error);
