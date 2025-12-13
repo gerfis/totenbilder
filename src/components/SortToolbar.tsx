@@ -73,8 +73,8 @@ export default function SortToolbar({ currentSort, currentOrder, onSortChange, g
                         </button>
                         <div className="w-px h-4 bg-[var(--c-border)] mx-1"></div>
                         <button
-                            onClick={() => onGridSizeChange(Math.min(gridSize + 1, 2))}
-                            disabled={gridSize >= 2}
+                            onClick={() => onGridSizeChange(Math.min(gridSize + 1, 4))}
+                            disabled={gridSize >= 4}
                             title="Größer (weniger Spalten)"
                             className="w-8 h-8 flex items-center justify-center rounded hover:bg-white hover:shadow-sm text-[var(--c-text-primary)] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                         >

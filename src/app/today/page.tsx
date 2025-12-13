@@ -78,6 +78,8 @@ function TodayContent() {
 
     const getGridClass = (size: number) => {
         switch (size) {
+            case 4: return "grid-cols-1"; // Single column
+            case 3: return "grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1"; // Also single column effectively, maybe with max-width wrapper if needed, but grid-cols-1 is safe
             case 2: return "grid-cols-1 sm:grid-cols-1 lg:grid-cols-2"; // XXL
             case 1: return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"; // XL
             case 0: return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"; // Default

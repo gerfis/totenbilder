@@ -199,6 +199,8 @@ function SearchContent() {
 
   const getGridClass = (size: number) => {
     switch (size) {
+      case 4: return "grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1"; // Single column
+      case 3: return "grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2"; // Very large
       case 2: return "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"; // XXL
       case 1: return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"; // XL
       case 0: return "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"; // Default
