@@ -3,6 +3,7 @@ import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { DUMMY_DATA } from '@/lib/dummy-data';
+import SortToolbar from '@/components/SortToolbar';
 import { getImageUrl, TotenbildRecord } from '@/lib/types';
 
 function SearchContent() {
@@ -13,6 +14,11 @@ function SearchContent() {
   const [location, setLocation] = useState(searchParams.get('location') || '');
   const [birthYear, setBirthYear] = useState(searchParams.get('birthYear') || '');
   const [deathYear, setDeathYear] = useState(searchParams.get('deathYear') || '');
+
+  // Sort state
+  const [sort, setSort] = useState<'name' | 'deathDate' | 'birthYear' | ''>(searchParams.get('sort') as any || '');
+  const [order, setOrder] = useState<'asc' | 'desc'>((searchParams.get('order') as any) || 'asc');
+
   const [people, setPeople] = useState<TotenbildRecord[]>([]);
   const [totalCount, setTotalCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -30,6 +36,10 @@ function SearchContent() {
       if (location) params.set('location', location);
       if (birthYear) params.set('birthYear', birthYear);
       if (deathYear) params.set('deathYear', deathYear);
+      if (sort) {
+        params.set('sort', sort);
+        params.set('order', order);
+      }
 
       // Update URL without adding to history stack for every keystroke
       // but ensuring the current history entry represents the current search
@@ -38,7 +48,7 @@ function SearchContent() {
       fetchData(1);
     }, 500);
     return () => clearTimeout(timer);
-  }, [search, location, birthYear, deathYear, router]);
+  }, [search, location, birthYear, deathYear, sort, order, router]);
 
   async function fetchData(targetPage: number) {
     if (targetPage === 1) {
@@ -54,6 +64,10 @@ function SearchContent() {
       if (location) params.append('location', location);
       if (birthYear) params.append('birthYear', birthYear);
       if (deathYear) params.append('deathYear', deathYear);
+      if (sort) {
+        params.append('sort', sort);
+        params.append('order', order);
+      }
       params.append('page', targetPage.toString());
       params.append('limit', '20');
 
@@ -175,6 +189,11 @@ function SearchContent() {
     return "—";
   };
 
+  const handleSortChange = (newSort: 'name' | 'deathDate' | 'birthYear' | '', newOrder: 'asc' | 'desc') => {
+    setSort(newSort);
+    setOrder(newOrder);
+  };
+
   return (
     <main className="min-h-screen pb-20 pt-8 w-full px-4 md:px-8">
       {!isDbConfigured && (
@@ -265,6 +284,8 @@ function SearchContent() {
             <div className="text-center py-20 text-[var(--c-text-secondary)]">Lade Daten...</div>
           ) : (
             <>
+              <SortToolbar currentSort={sort as any} currentOrder={order} onSortChange={handleSortChange} />
+
 
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 gallery-grid">
@@ -352,7 +373,7 @@ function SearchContent() {
             <div className="text-center py-20 bg-white rounded-lg border border-[var(--c-border)]">
               <p className="text-xl text-[var(--c-text-secondary)] mb-2">Keine Einträge gefunden</p>
               <button
-                onClick={() => { setSearch(''); setLocation(''); setBirthYear(''); setDeathYear(''); fetchData(1); }}
+                onClick={() => { setSearch(''); setLocation(''); setBirthYear(''); setDeathYear(''); setSort(''); setOrder('asc'); fetchData(1); }}
                 className="text-[var(--c-accent)] hover:underline"
               >
                 Filter zurücksetzen

@@ -12,6 +12,23 @@ export async function GET(request: NextRequest) {
     let day = parseInt(searchParams.get('day') || today.getDate().toString());
     let month = parseInt(searchParams.get('month') || (today.getMonth() + 1).toString());
 
+
+    // Sort logic
+    const sort = searchParams.get('sort');
+    const order = searchParams.get('order');
+    const direction = order === 'asc' ? 'ASC' : 'DESC';
+
+    let orderBy = 'ORDER BY a.Sterbejahr DESC'; // Default
+
+    if (sort === 'name') {
+        orderBy = `ORDER BY a.Nachname ${direction}, a.Vorname ${direction}`;
+    } else if (sort === 'deathDate') {
+        // For today page, day and month are same, so order by year is the main differentiator
+        orderBy = `ORDER BY a.Sterbejahr ${direction}`;
+    } else if (sort === 'birthYear') {
+        orderBy = `ORDER BY a.Geburtsjahr ${direction}`;
+    }
+
     try {
         if (!process.env.DB_HOST) {
             throw new Error("DB_NOT_CONFIGURED");
@@ -32,7 +49,7 @@ export async function GET(request: NextRequest) {
             FROM totenbilder a
             LEFT JOIN totenbilder_bilder b ON a.nid = b.nid
             WHERE a.Sterbemonat = ? AND a.Sterbetag = ?
-            ORDER BY a.Sterbejahr DESC
+            ${orderBy}
         `;
 
         const rows = await query(sql, [month, day]) as any[];

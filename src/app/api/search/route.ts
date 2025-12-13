@@ -12,6 +12,9 @@ export async function GET(request: NextRequest) {
     const limit = parseInt(searchParams.get('limit') || '8');
     const offset = (page - 1) * limit;
 
+    const sort = searchParams.get('sort'); // 'name', 'deathDate', 'birthYear'
+    const order = searchParams.get('order'); // 'asc', 'desc'
+
     // Common WHERE clause
     let whereClause = `WHERE 1=1`;
     const params: any[] = [];
@@ -45,11 +48,21 @@ export async function GET(request: NextRequest) {
 
     // Determine Order
     let orderBy = '';
-    if (isSearch) {
-        orderBy = `ORDER BY a.Sterbejahr DESC, a.Nachname ASC`;
+    const direction = order === 'asc' ? 'ASC' : 'DESC';
+
+    if (sort === 'name') {
+        orderBy = `ORDER BY a.Nachname ${direction}, a.Vorname ${direction}`;
+    } else if (sort === 'deathDate') {
+        orderBy = `ORDER BY a.Sterbejahr ${direction}, a.Sterbemonat ${direction}, a.Sterbetag ${direction}`;
+    } else if (sort === 'birthYear') {
+        orderBy = `ORDER BY a.Geburtsjahr ${direction}`;
     } else {
-        // Default homepage view
-        orderBy = `ORDER BY a.Sterbejahr DESC, a.Sterbemonat DESC, a.Sterbetag DESC, a.Nachname ASC`;
+        if (isSearch) {
+            orderBy = `ORDER BY a.Sterbejahr DESC, a.Nachname ASC`;
+        } else {
+            // Default homepage view
+            orderBy = `ORDER BY a.Sterbejahr DESC, a.Sterbemonat DESC, a.Sterbetag DESC, a.Nachname ASC`;
+        }
     }
 
     try {
