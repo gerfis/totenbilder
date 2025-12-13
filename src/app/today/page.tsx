@@ -18,6 +18,9 @@ function TodayContent() {
     const [sort, setSort] = useState<'name' | 'deathDate' | 'birthYear' | ''>(searchParams.get('sort') as any || '');
     const [order, setOrder] = useState<'asc' | 'desc'>((searchParams.get('order') as any) || 'asc');
 
+    // Grid Zoom state
+    const [gridSize, setGridSize] = useState(0);
+
     useEffect(() => {
         // Set date string for display
         const now = new Date();
@@ -73,6 +76,17 @@ function TodayContent() {
         return p.Sterbedatum || p.Sterbejahr?.toString() || "—";
     };
 
+    const getGridClass = (size: number) => {
+        switch (size) {
+            case 2: return "grid-cols-1 sm:grid-cols-1 lg:grid-cols-2"; // XXL
+            case 1: return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"; // XL
+            case 0: return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"; // Default
+            case -1: return "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5"; // XS
+            case -2: return "grid-cols-2 sm:grid-cols-4 lg:grid-cols-6"; // XXS
+            default: return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
+        }
+    };
+
     return (
         <main className="min-h-screen pb-20">
 
@@ -97,12 +111,18 @@ function TodayContent() {
                         {people.length > 0 ? (
                             <>
                                 <div className="flex justify-center mb-6">
-                                    <div className="bg-white p-2 rounded-lg border border-[var(--c-border)] inline-block">
-                                        <SortToolbar currentSort={sort as any} currentOrder={order} onSortChange={handleSortChange} />
+                                    <div className="bg-white p-2 rounded-lg border border-[var(--c-border)] inline-block w-full max-w-4xl">
+                                        <SortToolbar
+                                            currentSort={sort as any}
+                                            currentOrder={order}
+                                            onSortChange={handleSortChange}
+                                            gridSize={gridSize}
+                                            onGridSizeChange={setGridSize}
+                                        />
                                     </div>
                                 </div>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 gallery-grid">
+                                <div className={`grid ${getGridClass(gridSize)} gap-8 gallery-grid transition-all duration-300`}>
                                     {people.map(person => {
                                         const img = person.images[0];
                                         const isLandscape = img && (img.width || 0) > (img.height || 0);

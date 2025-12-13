@@ -19,6 +19,9 @@ function SearchContent() {
   const [sort, setSort] = useState<'name' | 'deathDate' | 'birthYear' | ''>(searchParams.get('sort') as any || '');
   const [order, setOrder] = useState<'asc' | 'desc'>((searchParams.get('order') as any) || 'asc');
 
+  // Grid Zoom state
+  const [gridSize, setGridSize] = useState(0);
+
   const [people, setPeople] = useState<TotenbildRecord[]>([]);
   const [totalCount, setTotalCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -194,6 +197,17 @@ function SearchContent() {
     setOrder(newOrder);
   };
 
+  const getGridClass = (size: number) => {
+    switch (size) {
+      case 2: return "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"; // XXL
+      case 1: return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"; // XL
+      case 0: return "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"; // Default
+      case -1: return "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"; // XS
+      case -2: return "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8"; // XXS
+      default: return "grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5";
+    }
+  };
+
   return (
     <main className="min-h-screen pb-20 pt-8 w-full px-4 md:px-8">
       {!isDbConfigured && (
@@ -284,11 +298,15 @@ function SearchContent() {
             <div className="text-center py-20 text-[var(--c-text-secondary)]">Lade Daten...</div>
           ) : (
             <>
-              <SortToolbar currentSort={sort as any} currentOrder={order} onSortChange={handleSortChange} />
+              <SortToolbar
+                currentSort={sort as any}
+                currentOrder={order}
+                onSortChange={handleSortChange}
+                gridSize={gridSize}
+                onGridSizeChange={setGridSize}
+              />
 
-
-
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 gallery-grid">
+              <div className={`grid ${getGridClass(gridSize)} gap-4 gallery-grid transition-all duration-300`}>
                 {people.map(person => {
                   const img = person.images[0];
                   const isLandscape = img && (img.width || 0) > (img.height || 0);
