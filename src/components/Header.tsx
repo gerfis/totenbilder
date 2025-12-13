@@ -28,7 +28,7 @@ export default function Header({ showDemoBanner = false }: HeaderProps) {
                         Archiv Suche
                     </Link>
                     <Link href="/today" className="hover:text-[var(--c-accent)] transition-colors border-b-2 border-transparent hover:border-[var(--c-accent)] pb-1">
-                        Heute Gedenken
+                        Heute im Gedenken
                     </Link>
                 </nav>
             </div>
