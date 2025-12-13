@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import SortToolbar from '@/components/SortToolbar';
 import { getImageUrl, TotenbildRecord } from '@/lib/types';
+import { useGridSize } from '@/hooks/useGridSize';
+import PersonCard from '@/components/PersonCard';
 
 function TodayContent() {
     const router = useRouter();
@@ -19,7 +21,7 @@ function TodayContent() {
     const [order, setOrder] = useState<'asc' | 'desc'>((searchParams.get('order') as any) || 'asc');
 
     // Grid Zoom state
-    const [gridSize, setGridSize] = useState(0);
+    const { gridSize, setGridSize } = useGridSize();
 
     useEffect(() => {
         // Set date string for display
@@ -126,62 +128,8 @@ function TodayContent() {
 
                                 <div className={`grid ${getGridClass(gridSize)} gap-8 gallery-grid transition-all duration-300`}>
                                     {people.map(person => {
-                                        const img = person.images[0];
-                                        const isLandscape = img && (img.width || 0) > (img.height || 0);
-
                                         return (
-                                            <Link
-                                                href={person.alias ? `/totenbild/${person.alias}` : `/person/${person.nid}`}
-                                                key={person.nid}
-                                                className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[var(--c-border)] flex flex-col group cursor-pointer h-full"
-                                            >
-                                                {/* Thumbnail */}
-                                                <div className="relative aspect-[4/5] bg-[var(--c-bg-main)] overflow-hidden border-b border-[var(--c-border)]">
-                                                    {img ? (
-                                                        <img
-                                                            src={getImageUrl(img.filename)}
-                                                            alt={person.Name}
-                                                            className={`w-full h-full transition-transform duration-700 filter sepia-[0.2] group-hover:scale-105 ${isLandscape ? 'object-contain' : 'object-cover'
-                                                                }`}
-                                                        />
-                                                    ) : (
-                                                        <div className="w-full h-full flex items-center justify-center text-[var(--c-accent)] opacity-20 text-4xl">
-                                                            †
-                                                        </div>
-                                                    )}
-                                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 pointer-events-none" />
-                                                </div>
-
-                                                {/* Card Details */}
-                                                <div className="p-6 flex-1 flex flex-col text-center">
-                                                    <div className="mb-4">
-                                                        <h2 className="text-2xl font-serif text-[var(--c-text-primary)] mb-1 leading-tight">
-                                                            {person.Nachname} {person.Vorname}
-                                                        </h2>
-                                                        {person.Ledigname && (
-                                                            <p className="text-sm text-[var(--c-accent)] font-medium italic">geb. {person.Ledigname}</p>
-                                                        )}
-                                                    </div>
-
-                                                    <div className="mt-auto space-y-2 text-sm text-[var(--c-text-secondary)] border-t border-[var(--c-border)] pt-4 mx-4">
-                                                        <div className="grid grid-cols-2 gap-2 text-left">
-                                                            <div>
-                                                                <span className="block text-xs uppercase opacity-60">Geboren</span>
-                                                                {person.Geburtsjahr || "—"}
-                                                            </div>
-                                                            <div className="text-right">
-                                                                <span className="block text-xs uppercase opacity-60">Gestorben</span>
-                                                                {formatDeathDate(person)}
-                                                            </div>
-                                                        </div>
-                                                        {person.Ort && (
-                                                            <div className="pt-2 flex justify-center items-center gap-1 opacity-80">
-                                                                <span>📍 {person.Ort}</span>
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                            </Link>
+                                            <PersonCard key={person.nid} person={person} />
                                         )
                                     })}
                                 </div>
