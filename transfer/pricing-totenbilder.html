@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preise - totenbilder.at | Digitale Erinnerungen bewahren</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .section-title {
+            text-align: center;
+            color: white;
+            margin: 4rem 0 2rem 0;
+            font-size: 2rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid #f39c12;
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: "⭐ EMPFOHLEN";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f39c12;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-subtitle {
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+
+        .price-box {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .price-setup {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .price-setup small {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        .price-recurring {
+            font-size: 1.3rem;
+            color: #27ae60;
+            margin-top: 0.5rem;
+        }
+
+        .price-free {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .features-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #ecf0f1;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .features-list li.disabled {
+            color: #bdc3c7;
+        }
+
+        .features-list li.disabled::before {
+            content: "✗";
+            color: #e74c3c;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .cta-button.premium {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+        }
+
+        .cta-button.premium:hover {
+            box-shadow: 0 5px 20px rgba(243, 156, 18, 0.4);
+        }
+
+        .highlight-box {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .highlight-box h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .combo-box {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .combo-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .combo-price {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .combo-savings {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .feature-comparison {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 3rem 0;
+            overflow-x: auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .comparison-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .check {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .cross {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .info-box {
+            background: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #27ae60;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏛️ totenbilder.at</h1>
+            <p>Bewahren Sie die Lebensgeschichte Ihrer Liebsten</p>
+            <p style="font-size: 1rem; margin-top: 0.5rem;">Seit 2014 | Über 10.000 Erinnerungen bewahrt</p>
+        </div>
+
+        <!-- MENSCHEN BEREICH -->
+        <h2 class="section-title">🏛️ Für Menschen - Digitale Erinnerungen</h2>
+
+        <div class="pricing-grid">
+            <!-- FREE -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="card-icon">🆓</div>
+                    <h3 class="card-title">FREE</h3>
+                    <p class="card-subtitle">Einfaches Gedenken</p>
+                </div>
+
+                <div class="price-box">
+                    <div class="price-free">€0</div>
+                    <p style="color: #7f8c8d;">Für immer kostenlos</p>
+                </div>
+
+                <ul class="features-list">
+                    <li>Totenbild online</li>
+                    <li>Basis-Daten (Name, Datum, Ort)</li>
+                    <li>5 Fotos</li>
+                    <li>Virtuelle Kerzen anzünden (10 zur Auswahl)</li>
+                    <li>In Suche auffindbar</li>
+                    <li>QR-Code Download</li>
+                    <li class="disabled">Keine 128 Fragen</li>
+                    <li class="disabled">Keine Videos</li>
+                    <li class="disabled">Kein PDF-Export</li>
+                    <li class="disabled">Mit Werbung</li>
+                </ul>
+
+                <a href="#" class="cta-button">Kostenlos starten</a>
+            </div>
+
+            <!-- PLUS -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="card-icon">💙</div>
+                    <h3 class="card-title">PLUS</h3>
+                    <p class="card-subtitle">Erweiterte Erinnerung</p>
+                </div>
+
+                <div class="price-box">
+                    <div class="price-setup">€29 <small>einmalig</small></div>
+                    <div class="price-recurring">+ €12/Jahr (= €1/Monat)</div>
+                </div>
+
+                <ul class="features-list">
+                    <li>Alles von FREE</li>
+                    <li>50 Fotos + 2 Videos (je 3 Min.)</li>
+                    <li>Timeline (Lebenslauf)</li>
+                    <li>Eigene URL (max.totenbilder.at)</li>
+                    <li>Gästebuch</li>
+                    <li>50 Premium-Kerzen/-Blumen</li>
+                    <li>Privatsphäre-Einstellungen</li>
+                    <li>PDF-Export (Basis)</li>
+                    <li class="disabled">Keine 128 Fragen</li>
+                    <li class="disabled">Musik-Player</li>
+                </ul>
+
+                <a href="#" class="cta-button">PLUS wählen</a>
+            </div>
+
+            <!-- PREMIUM - FEATURED -->
+            <div class="pricing-card featured">
+                <div class="card-header">
+                    <div class="card-icon">⭐</div>
+                    <h3 class="card-title">PREMIUM</h3>
+                    <p class="card-subtitle">Digitale Grabkammer</p>
+                </div>
+
+                <div class="price-box">
+                    <div class="price-setup">€99 <small>einmalig</small></div>
+                    <div class="price-recurring">+ €24/Jahr (= €2/Monat)</div>
+                </div>
+
+                <ul class="features-list">
+                    <li>Alles von PLUS</li>
+                    <li><strong>128 Fragen</strong> (kategorisiert!)</li>
+                    <li>Unbegrenzt Fotos & Videos</li>
+                    <li>Musik-Player (10 Songs)</li>
+                    <li>Lieblingsbücher, Filme, Zitate</li>
+                    <li>Sprachnachrichten (30 Min.)</li>
+                    <li><strong>Zu Lebzeiten befüllen!</strong></li>
+                    <li>Freigabe-Kontrolle nach Tod</li>
+                    <li><strong>PDF-Buch</strong> (50-200 Seiten)</li>
+                    <li>Premium-Design (5 Themes)</li>
+                    <li>Werbefrei</li>
+                    <li>QR-Code für Grabstein (Premium)</li>
+                </ul>
+
+                <a href="#" class="cta-button premium">PREMIUM wählen</a>
+            </div>
+        </div>
+
+        <!-- 128 FRAGEN HIGHLIGHT -->
+        <div class="highlight-box">
+            <h3>💎 Was sind die 128 Fragen?</h3>
+            <p style="margin: 1rem 0; font-size: 1.1rem;">
+                <strong>Das Problem:</strong> "Ich wünschte, ich hätte meinen Vater mehr gefragt..."
+            </p>
+            <p style="margin: 1rem 0;">
+                Die 128 Fragen helfen Ihnen, die Lebensgeschichte Ihrer Liebsten systematisch zu erfassen - 
+                <strong>bevor es zu spät ist.</strong>
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
+                <div style="background: #ecf0f1; padding: 1rem; border-radius: 8px;">
+                    <strong>📚 Kindheit & Jugend</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Wo bist du aufgewachsen? Lieblingsspiel?</p>
+                </div>
+                <div style="background: #ecf0f1; padding: 1rem; border-radius: 8px;">
+                    <strong>💼 Beruf & Karriere</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Stolzeste Leistung? Erste Arbeitsstelle?</p>
+                </div>
+                <div style="background: #ecf0f1; padding: 1rem; border-radius: 8px;">
+                    <strong>❤️ Liebe & Familie</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Wie habt ihr euch kennengelernt?</p>
+                </div>
+                <div style="background: #ecf0f1; padding: 1rem; border-radius: 8px;">
+                    <strong>💭 Werte & Rat</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Lebensmotto? Rat für junge Menschen?</p>
+                </div>
+            </div>
+            <p style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin-top: 2rem;">
+                <strong>⏰ Jetzt handeln:</strong> Führen Sie das Interview <strong>zu Lebzeiten</strong>. 
+                Nach dem Tod entscheiden Sie, was öffentlich wird.
+            </p>
+        </div>
+
+        <!-- TIERE BEREICH -->
+        <h2 class="section-title">🐾 Für Tiere - Regenbogenbrücke</h2>
+
+        <div class="pricing-grid">
+            <!-- TIER FREE -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="card-icon">🆓</div>
+                    <h3 class="card-title">TIER-FREE</h3>
+                    <p class="card-subtitle">Einfaches Gedenken</p>
+                </div>
+
+                <div class="price-box">
+                    <div class="price-free">€0</div>
+                    <p style="color: #7f8c8d;">Für immer kostenlos</p>
+                </div>
+
+                <ul class="features-list">
+                    <li>Gedenkseite</li>
+                    <li>1 Foto</li>
+                    <li>Basis-Text (100 Wörter)</li>
+                    <li>Kerzen/Lichter anzünden</li>
+                    <li>Regenbogenbrücke-Symbol</li>
+                    <li class="disabled">Kein Gästebuch</li>
+                    <li class="disabled">Keine Videos</li>
+                </ul>
+
+                <a href="#" class="cta-button">Kostenlos starten</a>
+            </div>
+
+            <!-- TIER PLUS -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="card-icon">💚</div>
+                    <h3 class="card-title">TIER-PLUS</h3>
+                    <p class="card-subtitle">Liebevolle Erinnerung</p>
+                </div>
+
+                <div class="price-box">
+                    <div class="price-setup">€19 <small>einmalig</small></div>
+                    <div class="price-recurring">+ €6/Jahr</div>
+                </div>
+
+                <ul class="features-list">
+                    <li>Alles von TIER-FREE</li>
+                    <li>20 Fotos + 1 Video</li>
+                    <li>Eigene URL</li>
+                    <li>Geschichten-Sammlung</li>
+                    <li>Gästebuch</li>
+                    <li>Jahrestags-Erinnerung</li>
+                    <li>50 Premium-Kerzen</li>
+                </ul>
+
+                <a href="#" class="cta-button">TIER-PLUS wählen</a>
+            </div>
+
+            <!-- TIER PREMIUM -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="card-icon">💎</div>
+                    <h3 class="card-title">TIER-PREMIUM</h3>
+                    <p class="card-subtitle">Vollständige Erinnerung</p>
+                </div>
+
+                <div class="price-box">
+                    <div class="price-setup">€49 <small>einmalig</small></div>
+                    <div class="price-recurring">+ €12/Jahr (= €1/Monat)</div>
+                </div>
+
+                <ul class="features-list">
+                    <li>Alles von TIER-PLUS</li>
+                    <li>Unbegrenzt Fotos/Videos</li>
+                    <li>Musik-Player</li>
+                    <li>Premium-Themes</li>
+                    <li>"Unsere Geschichte" (Timeline)</li>
+                    <li>PDF-Buch (20-50 Seiten)</li>
+                    <li>Pfoten-Abdruck-Generator</li>
+                    <li>Werbefrei</li>
+                </ul>
+
+                <a href="#" class="cta-button premium">TIER-PREMIUM wählen</a>
+            </div>
+        </div>
+
+        <!-- KOMBI-ANGEBOTE -->
+        <h2 class="section-title">🎁 Kombi-Pakete - Familie & Haustier</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin: 2rem 0;">
+            <div class="combo-box">
+                <h3>PAKET "Familie"</h3>
+                <p style="margin: 1rem 0;">1× Mensch PREMIUM + 1× Tier PREMIUM</p>
+                <div style="text-decoration: line-through; opacity: 0.7; margin-top: 1rem;">
+                    Normalpreis: €148 + €36/Jahr
+                </div>
+                <div class="combo-price">€119</div>
+                <div class="price-recurring" style="color: white;">+ €29/Jahr</div>
+                <div class="combo-savings">Sparen Sie €65 (20%!)</div>
+                <a href="#" class="cta-button" style="margin-top: 2rem; background: white; color: #27ae60;">Familie-Paket wählen</a>
+            </div>
+
+            <div class="combo-box" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);">
+                <h3>PAKET "Großfamilie"</h3>
+                <p style="margin: 1rem 0;">2× Mensch PREMIUM + 2× Tier PREMIUM</p>
+                <div style="text-decoration: line-through; opacity: 0.7; margin-top: 1rem;">
+                    Normalpreis: €296 + €72/Jahr
+                </div>
+                <div class="combo-price">€199</div>
+                <div class="price-recurring" style="color: white;">+ €49/Jahr</div>
+                <div class="combo-savings">Sparen Sie €169 (33%!)</div>
+                <a href="#" class="cta-button" style="margin-top: 2rem; background: white; color: #f39c12;">Großfamilie-Paket wählen</a>
+            </div>
+        </div>
+
+        <!-- ZUSATZ-SERVICES -->
+        <h2 class="section-title">✨ Zusatz-Services</h2>
+
+        <div class="feature-comparison">
+            <h3 style="margin-bottom: 2rem; color: #2c3e50;">Erweitern Sie Ihre Gedenkseite</h3>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>Service</th>
+                    <th>Beschreibung</th>
+                    <th>Preis</th>
+                </tr>
+                <tr>
+                    <td><strong>💐 Virtuelle Rose</strong></td>
+                    <td>Bleibt für immer sichtbar auf der Gedenkseite</td>
+                    <td><strong>€0.99</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>🕯️ Premium-Kerze</strong></td>
+                    <td>"Brennt" 1 Jahr lang auf der Seite</td>
+                    <td><strong>€1.99</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>🎵 Musikalische Kerze</strong></td>
+                    <td>Mit Lieblingslied (1 Jahr sichtbar)</td>
+                    <td><strong>€2.99</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>🌹 Virtueller Blumenstrauß</strong></td>
+                    <td>Großer Strauß, für immer sichtbar</td>
+                    <td><strong>€4.99</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>📖 Gedrucktes Buch</strong></td>
+                    <td>PDF-Buch professionell gedruckt (Hardcover)</td>
+                    <td><strong>€39.90</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>🏷️ QR-Code Grabstein-Plakette</strong></td>
+                    <td>Metall-Plakette mit QR-Code (wetterfest)</td>
+                    <td><strong>€49.90</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>📞 Lebensgeschichte-Service</strong></td>
+                    <td>Wir führen Interview & erstellen Gedenkseite</td>
+                    <td><strong>€299</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- FAQ / WICHTIGE INFO -->
+        <div class="highlight-box">
+            <h3>💡 Häufige Fragen</h3>
+            
+            <div style="margin: 2rem 0;">
+                <h4 style="color: #3498db; margin-bottom: 0.5rem;">Warum eine Jahresgebühr?</h4>
+                <p>Wie bei der Friedhofs-Liegegebühr deckt die Jahresgebühr unsere laufenden Kosten: 
+                Server-Betrieb, 3-fach redundantes Backup, Updates und Support. So garantieren wir, 
+                dass Ihre Erinnerungen für immer sicher sind.</p>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <h4 style="color: #3498db; margin-bottom: 0.5rem;">Was passiert wenn ich nicht mehr zahle?</h4>
+                <p>Die Gedenkseite bleibt online, wird aber auf FREE-Funktionen reduziert. 
+                Ihre Daten gehen NICHT verloren! Sie können jederzeit upgraden.</p>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <h4 style="color: #3498db; margin-bottom: 0.5rem;">Kann ich zu Lebzeiten eine Seite erstellen?</h4>
+                <p><strong>Ja! Das ist sogar EMPFOHLEN!</strong> Mit PREMIUM können Sie die 128 Fragen 
+                zu Lebzeiten beantworten (komplett privat). Nach dem Tod entscheidet die Familie, 
+                was öffentlich wird.</p>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <h4 style="color: #3498db; margin-bottom: 0.5rem;">Was ist der Lebensgeschichte-Service?</h4>
+                <p>Wir führen ein 2-stündiges Telefon-Interview mit Ihrer Mutter/Ihrem Vater, 
+                schreiben die Antworten auf, erstellen die Gedenkseite und das PDF-Buch. 
+                Perfekt für Menschen, die nicht technikaffin sind!</p>
+            </div>
+        </div>
+
+        <!-- EMOTIONAL APPEAL -->
+        <div class="success-box" style="text-align: center; font-size: 1.2rem; padding: 3rem;">
+            <h3 style="margin-bottom: 1.5rem; font-size: 2rem;">💙 "Was würden Sie dafür geben..."</h3>
+            <p style="margin: 1rem 0;">
+                ...Ihren Vater heute noch fragen zu können?<br>
+                ...die Stimme Ihrer Mutter noch einmal zu hören?<br>
+                ...die Geschichten Ihrer Großeltern bewahrt zu haben?
+            </p>
+            <p style="margin: 2rem 0; font-weight: bold; font-size: 1.3rem; color: #27ae60;">
+                Geben Sie Ihren Kindern die Chance, die Sie nicht hatten.
+            </p>
+            <a href="#" class="cta-button premium" style="max-width: 400px; margin: 2rem auto; display: block; font-size: 1.3rem; padding: 1.5rem;">
+                Jetzt beginnen →
+            </a>
+        </div>
+
+        <!-- TRUST SIGNALS -->
+        <div style="text-align: center; margin: 4rem 0; color: white;">
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">
+                ✅ Seit 2014 online | ✅ Über 10.000 Erinnerungen | ✅ 3-fach redundantes Backup | ✅ DSGVO-konform
+            </p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                Gemeinnütziger Verein totenbilder.at | Das digitale Gedächtnis Österreichs
+            </p>
+        </div>
+    </div>
+</body>
+</html>
